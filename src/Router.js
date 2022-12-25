@@ -6,6 +6,7 @@ import MovieDetail from './pages/MovieDetail/MovieDetail';
 import MovieList from './pages/MovieList/MovieList';
 import OrderPage from './pages/OrderPage/OrderPage';
 import OrderFinishPage from './pages/OrderFinishPage/OrderFinishPage';
+import Footer from './components/Footer/Footer';
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
