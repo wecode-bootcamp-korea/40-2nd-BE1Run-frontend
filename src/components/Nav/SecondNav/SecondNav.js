@@ -29,7 +29,7 @@ const SecondNav = () => {
           isShow={isShow}
           onMouseEnter={() => setIsShow(true)}
           onMouseLeave={() => setIsShow(false)}
-          top="20%"
+          top="195px"
         />
       </Container>
     </BorderLine>
