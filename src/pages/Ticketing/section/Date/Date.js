@@ -3,8 +3,14 @@ import styled from 'styled-components';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
+<<<<<<< HEAD
 const Movie = ({ Ticketing }) => {
   const [selectDay, setSelectDay] = useState(false);
+=======
+const Movie = () => {
+  const [selectDay, setSelectDay] = useState(false);
+
+>>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
   const handleDayClick = (selectDay, { selected }) => {
     if (selected) {
       setSelectDay(undefined);
@@ -25,7 +31,11 @@ const Movie = ({ Ticketing }) => {
       to: today.setDate(today.getDate() + 10000),
     },
   ];
+<<<<<<< HEAD
   Ticketing(selectDay);
+=======
+
+>>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
   return (
     <DateContainer>
       <Title>날짜</Title>

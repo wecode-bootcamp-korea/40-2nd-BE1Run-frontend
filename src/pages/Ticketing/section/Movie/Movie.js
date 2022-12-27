@@ -7,7 +7,11 @@ const Movie = () => {
   const [getMovieId, setGetMovieId] = useState(0);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch('/data/ticketingList.json')
+=======
+    fetch('data/movieList.json')
+>>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
       .then(response => response.json())
       .then(result => setMovieList(result));
   }, []);
