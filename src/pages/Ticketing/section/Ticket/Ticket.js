@@ -33,7 +33,10 @@ const Time = () => {
         </Process>
         <ToSelectSeat>
           <ValidArrow src={Arrow} alt="화살표" />
+<<<<<<< HEAD
           <SelectSeat>좌석선택</SelectSeat>
+=======
+>>>>>>> e8b3837 (ADD: 예매 페이지 레이아웃 완료)
         </ToSelectSeat>
       </Wrapper>
     </Container>
