@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const OrderFinishPage = () => {
-  return <div>orderfinishpage 입니다</div>;
+  return <Container>orderfinishpage</Container>;
 };
 
 export default OrderFinishPage;
+
+const Container = styled.div`
+  height: 1000px;
+`;
