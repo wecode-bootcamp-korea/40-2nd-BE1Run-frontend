@@ -6,7 +6,8 @@ import MovieDetail from './pages/MovieDetail/MovieDetail';
 import MovieList from './pages/MovieList/MovieList';
 import OrderPage from './pages/OrderPage/OrderPage';
 import OrderFinishPage from './pages/OrderFinishPage/OrderFinishPage';
-import Footer from './components/Footer/Footer';
+//TODO : nav 연결시 삭제 예정
+import Modal from './components/Modal/Modal';
 
 const Router = () => {
   return (
@@ -18,8 +19,9 @@ const Router = () => {
         <Route path="/movie-list" element={<MovieList />} />
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
+        {/* TODO : nav 연결시 삭제 예정 */}
+        <Route path="/modal" element={<Modal />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };

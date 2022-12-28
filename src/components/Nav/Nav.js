@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Nav = () => {
   return <div>nav입니다</div>;
