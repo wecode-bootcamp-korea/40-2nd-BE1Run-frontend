@@ -10,6 +10,7 @@ import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 //TODO : nav 연결시 삭제 예정
 import Modal from './components/Modal/Modal';
+import Seatpage from './pages/SeatPage/Seatpage';
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
         {/* TODO : nav 연결시 삭제 예정 */}
         <Route path="/modal" element={<Modal />} />
+        <Route path="/seat-page" element={<Seatpage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

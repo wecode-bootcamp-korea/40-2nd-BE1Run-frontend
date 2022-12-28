@@ -55,6 +55,7 @@ const Container = styled.div`
     rgb(200, 80, 60) 50%,
     rgb(51, 51, 58)
   );
+  z-index: 1;
 `;
 
 const Menu = styled.div`
