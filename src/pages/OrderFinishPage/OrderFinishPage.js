@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+=======
+import React from 'react';
+>>>>>>> b45fa6c (Add: detail 레이아웃완료 ,  서버 데이터 수신확인)
 
 const OrderFinishPage = () => {
   const [ticketReceipt, setTicketReceipt] = useState([]);
