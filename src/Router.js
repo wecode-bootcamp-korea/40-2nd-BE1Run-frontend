@@ -6,6 +6,7 @@ import MovieDetail from './pages/MovieDetail/MovieDetail';
 import MovieList from './pages/MovieList/MovieList';
 import OrderPage from './pages/OrderPage/OrderPage';
 import OrderFinishPage from './pages/OrderFinishPage/OrderFinishPage';
+import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 //TODO : nav 연결시 삭제 예정
 import Modal from './components/Modal/Modal';
@@ -13,6 +14,7 @@ import Modal from './components/Modal/Modal';
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/ticketing" element={<Ticketing />} />
