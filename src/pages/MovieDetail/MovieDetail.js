@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Stillcut from './Stillcut';
 import Trailer from './Trailer';
+=======
+import React from 'react';
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
 
 const MovieDetail = () => {
   const [data, setData] = useState([]);

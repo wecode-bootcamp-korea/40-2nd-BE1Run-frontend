@@ -78,6 +78,7 @@ const OrderFinishPage = () => {
 export default OrderFinishPage;
 
 const Container = styled.div`
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +91,16 @@ const Wrapper = styled.div`
   width: 1000px;
   height: 700px;
   border: 1px solid #fff;
+=======
+  background-color: gray;
+`;
+
+const Wrapper = styled.div`
+  margin: 60px auto;
+  background-color: antiquewhite;
+  width: 1200px;
+  height: 800px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
 `;
 
 const Title = styled.div`
@@ -99,12 +110,21 @@ const Title = styled.div`
   background-color: #333333;
   color: white;
   padding-top: 12px;
+<<<<<<< HEAD
   font-size: 24px;
 `;
 
 const FinishAlert = styled.div`
   margin: 30px 100px;
   font-size: 24px;
+=======
+  font-size: 30px;
+`;
+
+const FinishAlert = styled.div`
+  margin: 50px 100px;
+  font-size: 40px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
 `;
 
 const TicketFinish = styled.div`
@@ -134,7 +154,11 @@ const TicketSubtitle = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 70px;
+<<<<<<< HEAD
   font-size: 18px;
+=======
+  font-size: 20px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
   font-weight: bold;
   white-space: nowrap;
 `;
@@ -142,7 +166,11 @@ const TicketSubtitle = styled.div`
 const TicketContext = styled.span`
   display: flex;
   margin-left: 50px;
+<<<<<<< HEAD
   font-size: 18px;
+=======
+  font-size: 20px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
   font-weight: normal;
 `;
 
@@ -155,10 +183,17 @@ const BookingBtn = styled.div`
 const PrintBtn = styled.button`
   text-align: center;
   margin-left: 50px;
+<<<<<<< HEAD
   width: 150px;
   height: 50px;
   color: white;
   font-size: 16px;
+=======
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-size: 18px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
   background-color: red;
   border-radius: 5%;
   border: 0;
@@ -172,10 +207,17 @@ const PrintBtn = styled.button`
 const MessageBtn = styled.button`
   text-align: center;
   margin-left: 50px;
+<<<<<<< HEAD
   width: 150px;
   height: 50px;
   color: white;
   font-size: 16px;
+=======
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-size: 18px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
   background-color: gray;
   border-radius: 5%;
   border: 0;
@@ -189,10 +231,17 @@ const MessageBtn = styled.button`
 const CheckBtn = styled.button`
   text-align: center;
   margin-left: 50px;
+<<<<<<< HEAD
   width: 150px;
   height: 50px;
   color: white;
   font-size: 16px;
+=======
+  width: 200px;
+  height: 60px;
+  color: white;
+  font-size: 18px;
+>>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
   background-color: orange;
   border-radius: 5%;
   border: 0;
