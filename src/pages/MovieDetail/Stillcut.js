@@ -16,16 +16,10 @@ export function NextArrow(props) {
       style={{
         ...style,
         display: 'block',
-<<<<<<< HEAD
         width: '48px',
         height: '48px',
         opacity: '0.4',
         right: '-50px',
-=======
-        width: '24px',
-        height: '24px',
-        opacity: '0.4',
->>>>>>> b45fa6c (Add: detail 레이아웃완료 ,  서버 데이터 수신확인)
       }}
       onClick={onClick}
     />
@@ -42,16 +36,10 @@ export function PrevArrow(props) {
       style={{
         ...style,
         display: 'block',
-<<<<<<< HEAD
         width: '48px',
         height: '48px',
         opacity: '0.4',
         left: '-50px',
-=======
-        width: '24px',
-        height: '24px',
-        opacity: '0.4',
->>>>>>> b45fa6c (Add: detail 레이아웃완료 ,  서버 데이터 수신확인)
       }}
       onClick={onClick}
     />

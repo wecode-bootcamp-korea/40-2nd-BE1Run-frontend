@@ -7,11 +7,7 @@ const Theater = () => {
   const [activeLocation, setActiveLocation] = useState('');
 
   useEffect(() => {
-<<<<<<< HEAD
     fetch('/data/theaters.json')
-=======
-    fetch('data/theaters.json')
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
       .then(response => response.json())
       .then(result => setTheaterList(result));
   }, []);

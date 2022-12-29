@@ -6,11 +6,7 @@ const Time = () => {
   const [activeTime, setActiveTime] = useState('');
 
   useEffect(() => {
-<<<<<<< HEAD
     fetch(`/data/timecopy.json`)
-=======
-    fetch(`data/timecopy.json`)
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
       .then(response => response.json())
       .then(result => setTimeInfo(result));
   }, []);
@@ -21,22 +17,14 @@ const Time = () => {
       <TimeSpan>조조 심야</TimeSpan>
       <TimeWrapper>
         {timeInfo.map(item => (
-<<<<<<< HEAD
           <TimeBox key={item.id}>
-=======
-          <TimeBox key={timeInfo.id}>
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
             <TimeCard>
               <CardTop>
                 <Multiplex> {item.multiplex}</Multiplex>
                 <Floor>{item.floor}</Floor>
                 <Seat>{item.total_seats}석</Seat>
               </CardTop>
-<<<<<<< HEAD
               <TimeSeat>
-=======
-              <TimeSeat key={timeInfo.id}>
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
                 {item.time.map(({ time_id, time }) => (
                   <TimeSquare
                     key={time_id}

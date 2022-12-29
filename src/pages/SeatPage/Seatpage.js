@@ -5,10 +5,7 @@ import resetBtn from '../../assets/images/resetBtn.png';
 import unChecked from '../../assets/images/unchecked.png';
 import checkedImg from '../../assets/images/checked.png';
 import disabled from '../../assets/images/disabled.png';
-<<<<<<< HEAD
 import Ticket from '../../components/Ticket/Ticket';
-=======
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
 
 const HEAD_COUNTS = [
   { id: 0, count: 1 },
@@ -35,7 +32,6 @@ const Seatpage = () => {
       setSelectedSeats(selectedSeats.concat(seatId));
     }
   };
-<<<<<<< HEAD
 
   return (
     <>
@@ -118,89 +114,6 @@ const Seatpage = () => {
       </SeatPage>
       <Ticket />
     </>
-=======
-  console.log(selectedSeats);
-  console.log(max);
-
-  return (
-    <SeatPage>
-      <SeatDiv>
-        <SeatTitle>인원 / 좌석</SeatTitle>
-        <SeatHeader>
-          <HeaderSection width={45} color={'transparent'}>
-            {HEAD_COUNTS.map(({ id, count }) => (
-              <React.Fragment key={id}>
-                <HeaderDiv>
-                  <Radiorable>
-                    <RadioBtn
-                      type="radio"
-                      name="people"
-                      value={count}
-                      onClick={() => {
-                        setMax(count);
-                        setSelectedSeats([]);
-                      }}
-                    />
-                    <RadioDiv
-                      bgColor={id + 1 === max ? 'black' : null}
-                      fontColor={id + 1 === max ? 'white' : 'black'}
-                    >
-                      {count}명
-                    </RadioDiv>
-                  </Radiorable>
-                </HeaderDiv>
-              </React.Fragment>
-            ))}
-            {max === 0 && <WarningText>인원을 선택해 주세요</WarningText>}
-          </HeaderSection>
-          <HeaderSection width={55} color={'white'}>
-            <HeaderDiv>영화관 : {SEAT_DATA.loc}</HeaderDiv>
-            <HeaderDiv>상영관 : {SEAT_DATA.theotor}</HeaderDiv>
-            <HeaderDiv>상영날짜 : {SEAT_DATA.date}</HeaderDiv>
-            <HeaderDiv>시간 : {SEAT_DATA.runningTime}</HeaderDiv>
-          </HeaderSection>
-        </SeatHeader>
-        <SeatBody>
-          <Screen>
-            Screen
-            <ResetBtn
-              resetBtn={resetBtn}
-              onClick={() => {
-                setSelectedSeats([]);
-                // setMax(0);
-              }}
-            />
-          </Screen>
-          <SeatSection>
-            {SEAT_DATA.seat.map((status, idx) => {
-              return (
-                <Seat
-                  seatnum={status.id}
-                  type="checkbox"
-                  key={idx}
-                  checkImg={checkedImg}
-                  unCheckImg={unChecked}
-                  disabledImg={disabled}
-                  disabled={
-                    status.status === 1 ||
-                    (selectedSeats.length >= max &&
-                      !selectedSeats.includes(status.id))
-                  }
-                  checked={selectedSeats.includes(status.id)}
-                  onClick={() => handleSelect(status.id)}
-                />
-              );
-            })}
-            <RawSection>
-              {RAW_COUNT.map(raw => {
-                return <RawTitle key={raw.id}>{raw.raw}</RawTitle>;
-              })}
-            </RawSection>
-          </SeatSection>
-        </SeatBody>
-      </SeatDiv>
-    </SeatPage>
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
   );
 };
 
@@ -217,11 +130,7 @@ const SeatPage = styled.div`
 `;
 
 const SeatDiv = styled.div`
-<<<<<<< HEAD
   width: 900px;
-=======
-  width: 700px;
->>>>>>> 432c637 (ADD: 예매 페이지 레이아웃 초안)
   height: 80%;
   background-color: #eee;
   border: 1px solid white;
