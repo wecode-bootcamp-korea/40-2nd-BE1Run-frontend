@@ -7,10 +7,17 @@ const ListMovieCard = props => {
   const navigate = useNavigate();
 
   const onClickTiketingButton = () => {
+<<<<<<< HEAD
     navigate(`/ticketing/${id}`);
   };
   const onClickDetailButton = () => {
     navigate(`/movie-detail/${id}`);
+=======
+    navigate(`/tiketing/${id}`);
+  };
+  const onClickDetailButton = () => {
+    navigate(`/moviedetail/${id}`);
+>>>>>>> 344f051 (FIX: 영화리스트 레이아웃 완성)
   };
 
   return (

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ListMovieCard from './ListMovieCard';
-=======
-import React from 'react';
->>>>>>> db6475a (ADD: 결제 완료 페이지 레이아웃 완료)
-=======
-import React from 'react';
->>>>>>> b45fa6c (Add: detail 레이아웃완료 ,  서버 데이터 수신확인)
 
 const MovieList = () => {
   const [movieCard, setMovieCard] = useState([]);
