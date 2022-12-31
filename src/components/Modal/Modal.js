@@ -67,8 +67,12 @@ const ModalSection = styled.section`
   height: 600px;
   left: 30%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
 =======
 >>>>>>> 70a4a4f (Modify: 카카오로그인 구현)
+=======
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
+>>>>>>> b03d767 (fix)
   z-index: 9999;
 `;
