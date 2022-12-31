@@ -35,7 +35,9 @@ export default Modal;
 
 const Container = styled.div`
   text-align: center;
+  color: orange;
 `;
+
 const ModalImg = styled.img`
   margin: 30px 0 5px;
   width: 30px;
