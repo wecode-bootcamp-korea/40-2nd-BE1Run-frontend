@@ -78,14 +78,18 @@ const OrderFinishPage = () => {
 export default OrderFinishPage;
 
 const Container = styled.div`
-  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #444;
 `;
 
 const Wrapper = styled.div`
-  margin: 60px auto;
   background-color: antiquewhite;
-  width: 1200px;
-  height: 800px;
+  width: 1000px;
+  height: 700px;
+  border: 1px solid #fff;
 `;
 
 const Title = styled.div`
@@ -95,12 +99,12 @@ const Title = styled.div`
   background-color: #333333;
   color: white;
   padding-top: 12px;
-  font-size: 30px;
+  font-size: 24px;
 `;
 
 const FinishAlert = styled.div`
-  margin: 50px 100px;
-  font-size: 40px;
+  margin: 30px 100px;
+  font-size: 24px;
 `;
 
 const TicketFinish = styled.div`
@@ -130,7 +134,7 @@ const TicketSubtitle = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 70px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   white-space: nowrap;
 `;
@@ -138,7 +142,7 @@ const TicketSubtitle = styled.div`
 const TicketContext = styled.span`
   display: flex;
   margin-left: 50px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
 `;
 
@@ -151,10 +155,10 @@ const BookingBtn = styled.div`
 const PrintBtn = styled.button`
   text-align: center;
   margin-left: 50px;
-  width: 200px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background-color: red;
   border-radius: 5%;
   border: 0;
@@ -168,10 +172,10 @@ const PrintBtn = styled.button`
 const MessageBtn = styled.button`
   text-align: center;
   margin-left: 50px;
-  width: 200px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background-color: gray;
   border-radius: 5%;
   border: 0;
@@ -185,10 +189,10 @@ const MessageBtn = styled.button`
 const CheckBtn = styled.button`
   text-align: center;
   margin-left: 50px;
-  width: 200px;
-  height: 60px;
+  width: 150px;
+  height: 50px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background-color: orange;
   border-radius: 5%;
   border: 0;

@@ -9,10 +9,12 @@ const Modal = () => {
 
   const modalOpen = () => {
     setIsVisible(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const modalClose = () => {
     setIsVisible(false);
+    document.body.style.overflow = 'scroll';
   };
 
   useOutSideClick(ref, modalClose);
@@ -64,5 +66,6 @@ const ModalSection = styled.section`
   width: 500px;
   height: 600px;
   left: 30%;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
   z-index: 9999;
 `;

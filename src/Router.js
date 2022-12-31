@@ -18,8 +18,8 @@ const Router = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/ticketing" element={<Ticketing />} />
-        <Route path="/movie-detail" element={<MovieDetail />} />
+        <Route path="/ticketing/" element={<Ticketing />} />
+        <Route path="/movie-detail/:id" element={<MovieDetail />} />
         <Route path="/movie-list" element={<MovieList />} />
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />

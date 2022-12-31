@@ -44,15 +44,16 @@ const NAV_LIST = [
 const Container = styled.div`
   display: flex;
   text-align: center;
+  align-items: center;
   position: fixed;
   color: white;
   width: 100%;
-  height: 80px;
+  height: 60px;
   top: 0;
   background-image: linear-gradient(
     to right,
-    rgb(51, 51, 60),
-    rgb(200, 80, 60) 50%,
+    rgb(51, 51, 60) 63%,
+    rgb(200, 80, 60) 85%,
     rgb(51, 51, 58)
   );
   z-index: 1;
@@ -70,16 +71,19 @@ const DownCondense = styled.div`
 
 const LogoLink = styled.div`
   display: flex;
+  align-items: center;
+  margin-top: 5px;
 `;
 
 const LogoImg = styled.img`
-  width: 120px;
-  height: 60px;
+  width: 110px;
+  height: 55px;
   margin: 10px 100px;
 `;
 
 const LogoPhrase = styled.span`
-  margin-top: 27px;
+  display: flex;
+  align-items: center;
   width: 300px;
   font-size: 25px;
   color: orange;

@@ -50,6 +50,7 @@ const Container = styled.div`
   flex-direction: column;
   color: white;
   width: 1500px;
+  /* z-index: -999; */
 `;
 
 const Wrapper = styled.div`

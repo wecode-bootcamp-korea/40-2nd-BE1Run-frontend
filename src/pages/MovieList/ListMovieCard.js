@@ -7,10 +7,10 @@ const ListMovieCard = props => {
   const navigate = useNavigate();
 
   const onClickTiketingButton = () => {
-    navigate(`/tiketing/${id}`);
+    navigate(`/ticketing/${id}`);
   };
   const onClickDetailButton = () => {
-    navigate(`/moviedetail/${id}`);
+    navigate(`/movie-detail/${id}`);
   };
 
   return (

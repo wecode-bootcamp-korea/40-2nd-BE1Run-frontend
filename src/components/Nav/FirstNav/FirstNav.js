@@ -8,8 +8,8 @@ const FirstNav = () => {
     <Container>
       <TopBar>
         <Logo>
-          <LogoLink>
-            <LogoImg src="/images/Nav/BMTLogo.png" to="/" />
+          <LogoLink to="/">
+            <LogoImg src="/images/Nav/BMTLogo.png" />
             <LogoWord>BIG MOVIE TEATRO</LogoWord>
           </LogoLink>
         </Logo>
@@ -123,6 +123,7 @@ const LogoWord = styled.div`
 const UserIconDiv = styled.div`
   justify-content: flex-end;
   margin-top: 20px;
+  cursor: pointer;
 `;
 
 const IconMapDiv = styled.div`
