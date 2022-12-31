@@ -7,7 +7,7 @@ const Theater = () => {
   const [activeLocation, setActiveLocation] = useState('');
 
   useEffect(() => {
-    fetch('data/theaters.json')
+    fetch('/data/theaters.json')
       .then(response => response.json())
       .then(result => setTheaterList(result));
   }, []);

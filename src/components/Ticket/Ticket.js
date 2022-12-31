@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Arrow from '../../../../assets/ticketing/right-arrow.png';
-import Right from '../../../../assets/ticketing/right_gray.png';
+import Arrow from '../../assets/ticketing/right-arrow.png';
+import Right from '../../assets/ticketing/right_gray.png';
 
-const Time = () => {
+const Ticket = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Wrapper>
@@ -31,22 +34,21 @@ const Time = () => {
           <ProcessWord>결제</ProcessWord>
           <ProcessArrow src={Right} />
         </Process>
-        <ToSelectSeat>
+        <ToSelectSeat
+          onClick={() => {
+            navigate('/seat-page');
+          }}
+        >
           <ValidArrow src={Arrow} alt="화살표" />
-<<<<<<< HEAD
-          <SelectSeat>좌석선택</SelectSeat>
-=======
->>>>>>> e8b3837bb14ae184bcc57e2c0dc5cef8dbc61121
         </ToSelectSeat>
       </Wrapper>
     </Container>
   );
 };
 
-export default Time;
+export default Ticket;
 
 const Container = styled.div`
-  margin-bottom: 100px;
   color: white;
   width: 100%;
   height: 150px;
@@ -143,12 +145,4 @@ const ToSelectSeat = styled.button`
 
 const ValidArrow = styled.img`
   width: 90px;
-`;
-
-const SelectSeat = styled.span`
-  width: 100px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  white-space: nowrap;
 `;

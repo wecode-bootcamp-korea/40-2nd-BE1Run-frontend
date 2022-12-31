@@ -112,6 +112,7 @@ const OrderPageDiv = styled.div`
   justify-content: center;
   align-items: center;
   height: 750px;
+  background-color: #444;
 `;
 const Box = styled.section`
   display: flex;

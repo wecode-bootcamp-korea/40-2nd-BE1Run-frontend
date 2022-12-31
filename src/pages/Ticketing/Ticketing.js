@@ -3,7 +3,7 @@ import Movie from './section/Movie/Movie';
 import Theater from './section/Theater/Theater';
 import Date from './section/Date/Date';
 import Time from './section/Time/Time';
-import Ticket from './section/Ticket/Ticket';
+import Ticket from '../../components/Ticket/Ticket';
 import styled from 'styled-components';
 
 const Ticketing = () => {
@@ -15,7 +15,6 @@ const Ticketing = () => {
   return (
     <div>
       <Container>
-        <Title>예매</Title>
         <ContainBox>
           <ResetBtn onClick={() => window.location.reload()}>
             <Icon className="fa-solid fa-arrow-rotate-left" />
@@ -64,6 +63,7 @@ const Container = styled.h1`
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: #444;
 `;
 
 const ContainBox = styled.div`
@@ -72,18 +72,11 @@ const ContainBox = styled.div`
   margin-right: auto;
 `;
 
-const Title = styled.div`
-  display: flex;
-  flex-direction: space-around;
-  margin: 100px 0 30px 250px;
-  font-size: 30px;
-`;
-
 const ResetBtn = styled.button`
   width: 180px;
   height: 50px;
-  margin: 0 120px 20px 1130px;
-  border: 1px solid black;
+  margin: 20px 120px 20px 1130px;
+  border: 1px solid white;
   border-radius: 6px;
   background-color: #333333;
   color: white;
@@ -99,8 +92,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 1205px;
-  border: 2px solid black;
+  border: 2px solid white;
   margin: 0 auto 30px auto;
+  background-color: #fff;
 `;
 
 const Section = styled.div`

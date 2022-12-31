@@ -6,7 +6,7 @@ const Time = () => {
   const [activeTime, setActiveTime] = useState('');
 
   useEffect(() => {
-    fetch(`data/timecopy.json`)
+    fetch(`/data/timecopy.json`)
       .then(response => response.json())
       .then(result => setTimeInfo(result));
   }, []);
@@ -17,14 +17,14 @@ const Time = () => {
       <TimeSpan>조조 심야</TimeSpan>
       <TimeWrapper>
         {timeInfo.map(item => (
-          <TimeBox key={timeInfo.id}>
+          <TimeBox key={item.id}>
             <TimeCard>
               <CardTop>
                 <Multiplex> {item.multiplex}</Multiplex>
                 <Floor>{item.floor}</Floor>
                 <Seat>{item.total_seats}석</Seat>
               </CardTop>
-              <TimeSeat key={timeInfo.id}>
+              <TimeSeat>
                 {item.time.map(({ time_id, time }) => (
                   <TimeSquare
                     key={time_id}
@@ -73,11 +73,7 @@ const TimeBox = styled.div`
 `;
 
 const TimeWrapper = styled.div`
-<<<<<<< HEAD
   height: 460px;
-=======
-  height: 480px;
->>>>>>> e8b3837bb14ae184bcc57e2c0dc5cef8dbc61121
   overflow: scroll;
 `;
 

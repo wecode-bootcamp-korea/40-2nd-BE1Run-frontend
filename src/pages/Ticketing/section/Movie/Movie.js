@@ -7,16 +7,11 @@ const Movie = () => {
   const [getMovieId, setGetMovieId] = useState(0);
 
   useEffect(() => {
-    fetch('data/movieList.json')
+    fetch('/data/ticketingList.json')
       .then(response => response.json())
       .then(result => setMovieList(result));
   }, []);
 
-<<<<<<< HEAD
-=======
-  console.log(movieList);
-  console.log(activeMovie);
->>>>>>> e8b3837bb14ae184bcc57e2c0dc5cef8dbc61121
   return (
     <MovieContainer>
       <Title>영화</Title>
@@ -89,11 +84,7 @@ const MovieName = styled.span`
 
 const MovieList = styled.div`
   overflow: scroll;
-<<<<<<< HEAD
   height: 460px;
-=======
-  height: 480px;
->>>>>>> e8b3837bb14ae184bcc57e2c0dc5cef8dbc61121
 `;
 
 const List = styled.div`
