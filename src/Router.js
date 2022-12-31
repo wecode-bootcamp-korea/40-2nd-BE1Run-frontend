@@ -27,7 +27,6 @@ const Router = () => {
         <Route path="/modal" element={<Modal />} />
         <Route path="/seat-page" element={<Seatpage />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };
