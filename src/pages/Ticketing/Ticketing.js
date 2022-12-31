@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Movie from './section/Movie/Movie';
 import Theater from './section/Theater/Theater';
 import Date from './section/Date/Date';
@@ -7,6 +7,11 @@ import Ticket from './section/Ticket/Ticket';
 import styled from 'styled-components';
 
 const Ticketing = () => {
+  const [list, setList] = useState([]);
+  const [movieId, setMovieId] = useState(0);
+  const [activeLocation, setActiveLocation] = useState('');
+  const [activeTime, setActiveTime] = useState('');
+
   return (
     <div>
       <Container>
@@ -27,13 +32,21 @@ const Ticketing = () => {
                 <Theater />
               </TheaterClass>
               <DateClass>
-                <Date />
+                <Date
+                  Ticketing={Ticketing}
+                  movieId={movieId}
+                  activeLocation={activeLocation}
+                />
               </DateClass>
             </Section>
             <Section>
               <TimeContainer>
                 <TimeClass>
-                  <Time />
+                  <Time
+                    activeTime={activeTime}
+                    setActiveTime={setActiveTime}
+                    movieId={movieId}
+                  />
                 </TimeClass>
               </TimeContainer>
             </Section>
@@ -62,8 +75,8 @@ const ContainBox = styled.div`
 const Title = styled.div`
   display: flex;
   flex-direction: space-around;
-  margin: 200px 0 30px 250px;
-  font-size: 35px;
+  margin: 100px 0 30px 250px;
+  font-size: 30px;
 `;
 
 const ResetBtn = styled.button`

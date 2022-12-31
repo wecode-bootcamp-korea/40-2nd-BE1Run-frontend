@@ -73,7 +73,11 @@ const TimeBox = styled.div`
 `;
 
 const TimeWrapper = styled.div`
+<<<<<<< HEAD
   height: 460px;
+=======
+  height: 480px;
+>>>>>>> e8b3837bb14ae184bcc57e2c0dc5cef8dbc61121
   overflow: scroll;
 `;
 

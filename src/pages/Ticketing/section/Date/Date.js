@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
-const Movie = () => {
+const Movie = ({ Ticketing }) => {
   const [selectDay, setSelectDay] = useState(false);
-
   const handleDayClick = (selectDay, { selected }) => {
     if (selected) {
       setSelectDay(undefined);
@@ -26,7 +25,7 @@ const Movie = () => {
       to: today.setDate(today.getDate() + 10000),
     },
   ];
-
+  Ticketing(selectDay);
   return (
     <DateContainer>
       <Title>날짜</Title>
