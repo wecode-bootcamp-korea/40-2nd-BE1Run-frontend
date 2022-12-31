@@ -18,29 +18,30 @@ const Modal = () => {
 
   useOutSideClick(ref, modalClose);
   return (
-    <div>
-      <ModalBtn onClick={modalOpen}>로그인</ModalBtn>
+    <ModalContainer>
+      <ModalImg src="/images/Nav/padlock.png" onClick={modalOpen}>
+        로그인
+      </ModalImg>
       {isVisible && (
         <ModalSection ref={ref}>
           <CloseBtn onClick={modalClose}>X</CloseBtn>
-          {/* <Login /> */}
-          <Signup />
+          <Login />
         </ModalSection>
       )}
-    </div>
+    </ModalContainer>
   );
 };
 export default Modal;
 
-const ModalBtn = styled.button`
-  border: #aaa solid 2px;
-  border-radius: 15px;
-  width: 80px;
-  height: 30px;
-  &:hover {
-    background-color: #333;
-    color: white;
-  }
+const ModalContainer = styled.div`
+  text-align: center;
+  color: orange;
+`;
+
+const ModalImg = styled.img`
+  margin: 30px 0 5px;
+  width: 30px;
+  height: 27px;
 `;
 
 const CloseBtn = styled.button`

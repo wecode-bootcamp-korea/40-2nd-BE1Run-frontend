@@ -65,7 +65,7 @@ const Login = () => {
       </LoginForm>
 
       <a href={KAKAO_AUTH_URL}>
-        <KakaoImg src="/images/kakaologinbtn.jpg" alt="카카오버튼" />
+        <KakaoImg src="/images/kakaologin.jpg" alt="카카오버튼" />
       </a>
     </LoginSection>
   );
@@ -79,6 +79,9 @@ const LoginSection = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  a {
+    text-decoration-line: none;
+  }
 `;
 
 const LogoImg = styled.img`
