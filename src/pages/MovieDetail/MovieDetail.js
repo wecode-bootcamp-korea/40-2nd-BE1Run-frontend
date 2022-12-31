@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Stillcut from './Stillcut';
 import Trailer from './Trailer';
->>>>>>> b45fa6c23fdacbbbf8a9684740a6c93357938c41
 
 const MovieDetail = () => {
   const [data, setData] = useState([]);
@@ -128,7 +124,7 @@ const TitleParagraph = styled.p`
 `;
 
 const DescriptSection = styled.div`
-  padding : 30px
+  padding: 30px;
   width: 100%;
   height: 700px;
   background-color: #ccc;
