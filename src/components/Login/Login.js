@@ -8,6 +8,10 @@ const Login = () => {
   const [paraTop, setParaTop] = useState(40);
   const [fontsize, setFontSize] = useState(20);
 
+  const REST_API_KEY = '59bb969ce2c3aaf4dbbeaf8d523ed2ce';
+  const REDIRECT_URI = 'http://localhost:3000/oauth/kakao/callback';
+  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+
   const { userID, userPW } = inputValue;
 
   const onChangeHandler = e => {
@@ -59,11 +63,10 @@ const Login = () => {
         </InputSection>
         <SubmitBtn disabled>Login</SubmitBtn>
       </LoginForm>
-      <KakaoBtn>
-        <KakaoImg src="images/kakao-talk.png" alt="카카오로고" />
-        Sign with Kakao
-      </KakaoBtn>
-      <SingUpBtn>Sign Up</SingUpBtn>
+
+      <a href={KAKAO_AUTH_URL}>
+        <KakaoImg src="/images/kakaologinbtn.jpg" alt="카카오버튼" />
+      </a>
     </LoginSection>
   );
 };
@@ -117,7 +120,7 @@ export const LoginInput = styled.input`
 export const SubmitBtn = styled.button`
   margin-top: 30px;
   border-radius: 3px;
-  width: 100%;
+  width: 200px;
   height: 50px;
   background-color: #bbb;
   &:hover {
@@ -126,34 +129,13 @@ export const SubmitBtn = styled.button`
   }
 `;
 
-const KakaoBtn = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  height: 50px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  color: #f9e000;
-  border: #f9e000 solid 2px;
-  border-radius: 5px;
-  opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
-`;
-
 const KakaoImg = styled.img`
-  width: 30px;
-  height: 30px;
   margin-right: 10px;
-`;
 
-const SingUpBtn = styled.button`
-  width: 70%;
+  border-radius: 3px;
+  width: 200px;
   height: 50px;
-  margin-bottom: 30px;
-  background-color: #222;
-  color: #ddd;
-  border-radius: 5px;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
