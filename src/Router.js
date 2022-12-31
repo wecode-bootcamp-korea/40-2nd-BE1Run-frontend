@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 //TODO : nav 연결시 삭제 예정
 import Modal from './components/Modal/Modal';
 import Seatpage from './pages/SeatPage/Seatpage';
+import Search from './components/Nav/SecondNav/Search';
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
         <Route path="/" element={<Main />} />
         <Route path="/ticketing/:id" element={<Ticketing />} />
         <Route path="/movie-detail/:id" element={<MovieDetail />} />
+        <Route path="/movies/search" element={<Search />} />
         <Route path="/movie-list" element={<MovieList />} />
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
