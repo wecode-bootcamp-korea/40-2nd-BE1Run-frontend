@@ -35,9 +35,7 @@ export default Modal;
 
 const Container = styled.div`
   text-align: center;
-  color: orange;
 `;
-
 const ModalImg = styled.img`
   margin: 30px 0 5px;
   width: 30px;
@@ -68,6 +66,9 @@ const ModalSection = styled.section`
   width: 500px;
   height: 600px;
   left: 30%;
+<<<<<<< HEAD
   box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.6);
+=======
+>>>>>>> 70a4a4f (Modify: 카카오로그인 구현)
   z-index: 9999;
 `;
