@@ -16,9 +16,10 @@ export function NextArrow(props) {
       style={{
         ...style,
         display: 'block',
-        width: '24px',
-        height: '24px',
+        width: '48px',
+        height: '48px',
         opacity: '0.4',
+        right: '-50px',
       }}
       onClick={onClick}
     />
@@ -35,9 +36,10 @@ export function PrevArrow(props) {
       style={{
         ...style,
         display: 'block',
-        width: '24px',
-        height: '24px',
+        width: '48px',
+        height: '48px',
         opacity: '0.4',
+        left: '-50px',
       }}
       onClick={onClick}
     />

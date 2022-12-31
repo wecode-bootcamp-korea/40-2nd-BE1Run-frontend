@@ -22,57 +22,67 @@ const MovieDetail = () => {
   console.log(data);
   // console.log(trailerData);
   return (
-    <DetailDiv>
-      <Detailheader>
-        <DetailImg src={data.thumbnail_image_url} />
-        <DetailTextSection>
-          <Title>
-            <TitleParagraph fontsize="36" opacity="1">
-              {data.title}
-            </TitleParagraph>
-            <TitleParagraph fontsize="24" opacity="0.6">
-              {data.title_eng}
-            </TitleParagraph>
-          </Title>
-          <SubSection>
-            <TitleParagraph fontsize="18" opacity="1">
-              감독 : {data.director}
-            </TitleParagraph>
-            <TitleParagraph fontsize="18" opacity="1">
-              배우 : {data.actors}
-            </TitleParagraph>
-            <TitleParagraph fontsize="18" opacity="1">
-              시간 : {data.duration_min}분
-            </TitleParagraph>
-            <TitleParagraph fontsize="18" opacity="1">
-              개봉일 : {data.opening_date}
-            </TitleParagraph>
-          </SubSection>
-        </DetailTextSection>
-      </Detailheader>
-      <DescriptSection>{data.descriptions}</DescriptSection>
-      <SubParagraph>Still Cut</SubParagraph>
-      <Stillcut stillcut={data.still_cut_image} />
-      <SubParagraph>Trailer</SubParagraph>
-      <Trailer trailer={data.trailer_videos_url} />
-      <RemoteBtn
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-      >
-        ⏏︎
-      </RemoteBtn>
-    </DetailDiv>
+    <Container>
+      <DetailDiv>
+        <Detailheader>
+          <DetailImg src={data.thumbnail_image_url} />
+          <DetailTextSection>
+            <Title>
+              <TitleParagraph fontsize="36" opacity="1">
+                {data.title}
+              </TitleParagraph>
+              <TitleParagraph fontsize="24" opacity="0.6">
+                {data.title_eng}
+              </TitleParagraph>
+            </Title>
+            <SubSection>
+              <TitleParagraph fontsize="18" opacity="1">
+                감독 : {data.director}
+              </TitleParagraph>
+              <TitleParagraph fontsize="18" opacity="1">
+                배우 : {data.actors}
+              </TitleParagraph>
+              <TitleParagraph fontsize="18" opacity="1">
+                시간 : {data.duration_min}분
+              </TitleParagraph>
+              <TitleParagraph fontsize="18" opacity="1">
+                개봉일 : {data.opening_date}
+              </TitleParagraph>
+            </SubSection>
+          </DetailTextSection>
+        </Detailheader>
+        <DescriptSection>{data.descriptions}</DescriptSection>
+        <SubParagraph>Still Cut</SubParagraph>
+        <Stillcut stillcut={data.still_cut_image} />
+        <SubParagraph>Trailer</SubParagraph>
+        <Trailer trailer={data.trailer_videos_url} />
+        <RemoteBtn>
+          <p
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            ⏏︎
+          </p>
+        </RemoteBtn>
+      </DetailDiv>
+    </Container>
   );
 };
 
 export default MovieDetail;
 
+const Container = styled.div`
+  display: flex;
+  background-color: #444;
+  justify-content: center;
+`;
+
 const DetailDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 70%;
+  margin-top: 20px;
+  width: 1000px;
 `;
 
 const Detailheader = styled.section`
@@ -80,12 +90,12 @@ const Detailheader = styled.section`
   justify-content: space-between;
   width: 100%;
   height: 300px;
-  background-color: #ddd;
+  background-color: #111;
 `;
 
 const DetailImg = styled.img`
   height: 100%;
-  background-color: #aaa;
+  background-color: #111;
 `;
 
 const DetailTextSection = styled.section`
@@ -93,7 +103,7 @@ const DetailTextSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 78%;
+  width: 70%;
   height: 100%;
 
   background-color: #bbb;
@@ -115,7 +125,7 @@ const SubSection = styled.section`
   justify-content: space-around;
   width: 95%;
   height: 150px;
-  background-color: #ccc;
+  background-color: antiquewhite;
 `;
 
 const TitleParagraph = styled.p`
@@ -126,7 +136,7 @@ const TitleParagraph = styled.p`
 const DescriptSection = styled.div`
   padding: 30px;
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-color: #ccc;
 `;
 
@@ -139,13 +149,16 @@ const SubParagraph = styled.p`
   color: #555;
   border-radius: 5px;
   padding: 5px 15px;
-  background-color: #eee;
+  background-color: antiquewhite;
 `;
 const RemoteBtn = styled.button`
   position: fixed;
   left: 90%;
   top: 80%;
   width: 48px;
-  height: 48px;
+  height: 60px;
   border-radius: 24px;
+  border: none;
+  font-size: 36px;
+  background-color: antiquewhite;
 `;
