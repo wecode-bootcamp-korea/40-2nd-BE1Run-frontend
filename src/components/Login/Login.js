@@ -33,7 +33,7 @@ const Login = () => {
   useOutSideClick(ref, downHandler);
   return (
     <LoginSection>
-      <LogoImg src="images/BMTLogo.png" alt="logo" />
+      <LogoImg src="/images/BMTLogo.png" alt="logo" />
       <LoginForm>
         <InputSection>
           <InputParagraph top={paraTop} fontsize={fontsize}>
@@ -65,7 +65,10 @@ const Login = () => {
       </LoginForm>
 
       <a href={KAKAO_AUTH_URL}>
-        <KakaoImg src="/images/kakaologin.jpg" alt="카카오버튼" />
+        <KakaoBtn>
+          <KakaoImg src="/images/kakao-talk.png" alt="카카오로고" />
+          카카오 로그인
+        </KakaoBtn>
       </a>
     </LoginSection>
   );
@@ -109,7 +112,7 @@ export const InputParagraph = styled.p`
 export const LoginInput = styled.input`
   width: 100%;
   height: 25%;
-  margin-top: 40px;
+  margin-top: 60px;
   padding-bottom: 5px;
   background-color: transparent;
   font-size: 20px;
@@ -123,22 +126,36 @@ export const LoginInput = styled.input`
 export const SubmitBtn = styled.button`
   margin-top: 30px;
   border-radius: 3px;
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 45px;
   background-color: #bbb;
+  cursor: pointer;
   &:hover {
     background-color: #333;
     color: white;
   }
 `;
-
-const KakaoImg = styled.img`
+export const KakaoImg = styled.img`
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
+`;
 
-  border-radius: 3px;
-  width: 200px;
+export const KakaoBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
   height: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #f9e000;
+  color: black;
+  border: black solid 2px;
+  border-radius: 5px;
+  opacity: 0.8;
+  cursor: pointer;
   &:hover {
-    opacity: 0.7;
+    opacity: 1;
   }
 `;

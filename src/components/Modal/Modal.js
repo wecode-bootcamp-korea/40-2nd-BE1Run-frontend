@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import Login from '../Login/Login';
-import Signup from '../Signup/Signup';
 import styled from 'styled-components';
 import useOutSideClick from '../../utils/hooks/useOutSideClick';
 
@@ -18,43 +17,39 @@ const Modal = () => {
 
   useOutSideClick(ref, modalClose);
   return (
-    <ModalContainer>
-      <ModalImg src="/images/Nav/padlock.png" onClick={modalOpen}>
-        로그인
-      </ModalImg>
+    <Container>
+      <ModalImg src="/images/Nav/padlock.png" onClick={modalOpen} />
+      <ModalTitle>로그인</ModalTitle>
       {isVisible && (
         <ModalSection ref={ref}>
-          <CloseBtn onClick={modalClose}>X</CloseBtn>
+          <CloseBtn onClick={modalClose} src="/images/xbtn.png" />
           <Login />
         </ModalSection>
       )}
-    </ModalContainer>
+    </Container>
   );
 };
 export default Modal;
 
-const ModalContainer = styled.div`
+const Container = styled.div`
   text-align: center;
-  color: orange;
 `;
-
 const ModalImg = styled.img`
   margin: 30px 0 5px;
   width: 30px;
   height: 27px;
 `;
 
-const CloseBtn = styled.button`
+const ModalTitle = styled.div`
+  text-align: center;
+  color: orange;
+`;
+
+const CloseBtn = styled.img`
   position: absolute;
   right: 20px;
-  border: #aaa solid 1px;
-  border-radius: 20px;
-  width: 30px;
-  height: 30px;
-  &:hover {
-    background-color: #555;
-    color: white;
-  }
+  width: 25px;
+  height: 25px;
 `;
 
 const ModalSection = styled.section`
@@ -66,6 +61,8 @@ const ModalSection = styled.section`
   border-radius: 5px;
   padding: 20px;
   margin: auto;
-  width: 600px;
+  width: 500px;
   height: 600px;
+  left: 30%;
+  z-index: 9999;
 `;
