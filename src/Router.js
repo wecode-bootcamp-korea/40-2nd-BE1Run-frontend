@@ -10,6 +10,7 @@ import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 //TODO : nav 연결시 삭제 예정
 import Modal from './components/Modal/Modal';
+import Seatpage from './pages/SeatPage/Seatpage';
 
 const Router = () => {
   return (
@@ -17,13 +18,14 @@ const Router = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/ticketing" element={<Ticketing />} />
-        <Route path="/movie-detail" element={<MovieDetail />} />
+        <Route path="/ticketing/:id" element={<Ticketing />} />
+        <Route path="/movie-detail/:id" element={<MovieDetail />} />
         <Route path="/movie-list" element={<MovieList />} />
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
         {/* TODO : nav 연결시 삭제 예정 */}
         <Route path="/modal" element={<Modal />} />
+        <Route path="/seat-page" element={<Seatpage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

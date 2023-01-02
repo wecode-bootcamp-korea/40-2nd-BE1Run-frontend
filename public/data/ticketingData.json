@@ -1,0 +1,78 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "아바타",
+      "english_name": "Avatar",
+      "age_grade": 12,
+      "openning_date": "2022-12-14",
+      "director": "James Cameron",
+      "actor": "Sam Washington",
+      "img": "/images/MovieDetail.Avatar.png"
+    },
+    {
+      "id": 2,
+      "name": "영웅",
+      "english_name": "Hero",
+      "age_grade": 12,
+      "openning_date": "2022-12-21",
+      "img": "/images/MovieDetail.Hero.png"
+    },
+    {
+      "id": 3,
+      "name": "올빼미",
+      "english_name": "Owl",
+      "age_grade": 15,
+      "openning_date": "2022-11-23"
+    },
+    {
+      "id": 4,
+      "name": "코르사주",
+      "english_name": "Coursage",
+      "age_grade": 15,
+      "openning_date": "2022-12-21"
+    },
+    {
+      "id": 5,
+      "name": "본즈 앤 올",
+      "english_name": "Bones and All",
+      "age_grade": 19,
+      "openning_date": "2022-11-30"
+    },
+    {
+      "id": 6,
+      "name": "가가린",
+      "english_name": "Gagarine",
+      "age_grade": 12,
+      "openning_date": "2022-12-22"
+    },
+    {
+      "id": 7,
+      "name": "베테랑",
+      "english_name": "Veteran",
+      "age_grade": 12,
+      "openning_date": "2022-12-22"
+    },
+    {
+      "id": 8,
+      "name": "라 비 앙 로즈",
+      "english_name": "La Vie En Rose",
+      "age_grade": 12,
+      "openning_date": "2022-12-14"
+    }
+  ],
+  "극장": [
+    {
+      "theater_id": 1,
+      "theater_name": "강남"
+    },
+    {
+      "theater_id": 2,
+      "theater_name": "서울대입구"
+    },
+    {
+      "theater_id": 3,
+      "theater_name": "판교"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "에이",
+    "url": "./images/postser.jpg",
+    "runtime": "2020분"
+  },
+  {
+    "id": 2,
+    "name": "비",
+    "url": "./images/postser.jpg",
+    "runtime": "2022분"
+  },
+  {
+    "id": 3,
+    "name": "씨",
+    "url": "./images/postser.jpg",
+    "runtime": "203분"
+  },
+  {
+    "id": 4,
+    "name": "디",
+    "url": "./images/postser.jpg",
+    "runtime": "24분"
+  },
+  {
+    "id": 5,
+    "name": "이",
+    "url": "./images/postser.jpg",
+    "runtime": "201분"
+  },
+  {
+    "id": 6,
+    "name": "에프",
+    "url": "./images/postser.jpg",
+    "runtime": "2222분"
+  },
+  {
+    "id": 7,
+    "name": "쥐",
+    "url": "./images/postser.jpg",
+    "runtime": "2033분"
+  },
+  {
+    "id": 8,
+    "name": "에이치",
+    "url": "./images/postser.jpg",
+    "runtime": "44분"
+  }
+]

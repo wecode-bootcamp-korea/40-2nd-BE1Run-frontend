@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Modal from '../../Modal/Modal';
 
 const FirstNav = () => {
   return (
     <Container>
       <TopBar>
         <Logo>
-          <LogoLink>
-            <LogoImg src="/images/Nav/BMTLogo.png" to="/" />
+          <LogoLink to="/">
+            <LogoImg src="/images/Nav/BMTLogo.png" />
             <LogoWord>BIG MOVIE TEATRO</LogoWord>
           </LogoLink>
         </Logo>
         <UserIconDiv>
           <IconMapDiv>
+            <Modal />
             {ICON_LIST.map(item => (
               <StyleLink to={item.goto} key={item.id}>
                 <IconImg src={item.url} />
@@ -121,6 +123,7 @@ const LogoWord = styled.div`
 const UserIconDiv = styled.div`
   justify-content: flex-end;
   margin-top: 20px;
+  cursor: pointer;
 `;
 
 const IconMapDiv = styled.div`
@@ -155,7 +158,6 @@ const StyleLink = styled(Link)`
 `;
 
 const ICON_LIST = [
-  { id: 1, url: '/images/Nav/padlock.png', title: '로그인', goto: '/' },
-  { id: 2, url: '/images/Nav/user.png', title: 'MY BMT', goto: '/' },
-  { id: 3, url: '/images/Nav/headset.png', title: '고객센터', goto: '/' },
+  { id: 1, url: '/images/Nav/user.png', title: 'MY BMT', goto: '/' },
+  { id: 2, url: '/images/Nav/headset.png', title: '고객센터', goto: '/' },
 ];

@@ -29,7 +29,7 @@ const SecondNav = () => {
           isShow={isShow}
           onMouseEnter={() => setIsShow(true)}
           onMouseLeave={() => setIsShow(false)}
-          top="20%"
+          top="195px"
         />
       </Container>
     </BorderLine>
@@ -50,6 +50,7 @@ const Container = styled.div`
   flex-direction: column;
   color: white;
   width: 1500px;
+  /* z-index: -999; */
 `;
 
 const Wrapper = styled.div`

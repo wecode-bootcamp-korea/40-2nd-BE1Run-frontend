@@ -1,0 +1,14 @@
+[
+  {
+    "theater_id": 1,
+    "theater_name": "강남"
+  },
+  {
+    "theater_id": 2,
+    "theater_name": "서울대입구"
+  },
+  {
+    "theater_id": 3,
+    "theater_name": "판교"
+  }
+]

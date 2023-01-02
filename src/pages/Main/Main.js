@@ -100,7 +100,7 @@ const Main = () => {
         <MovieChartTitle>
           <TitleFirst>무비차트</TitleFirst>
           <TitleSecond>
-            <Link to="/">전체보기</Link>
+            <Link to="/movie-list">전체보기</Link>
           </TitleSecond>
         </MovieChartTitle>
         <Slider {...settings}>

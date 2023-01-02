@@ -2,28 +2,29 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const ListMovieCard = () => {
+const ListMovieCard = props => {
+  const { id, url, name, runtime } = props;
   const navigate = useNavigate();
 
   const onClickTiketingButton = () => {
-    navigate('/tiketing');
+    navigate(`/ticketing/${id}`);
   };
   const onClickDetailButton = () => {
-    navigate('/moviedetail');
+    navigate(`/movie-detail/${id}`);
   };
 
   return (
     <Container>
-      <MovieNumber>No.1</MovieNumber>
+      <MovieNumber>No.{id}</MovieNumber>
       <MovieThumnail>
         <PosterThumnail
-          src="./images/postser.jpg"
+          src={url}
           onClick={onClickDetailButton}
           alt="영화썸네일"
         />
       </MovieThumnail>
-      <MovieName>영화제목</MovieName>
-      <MovieRunTime>3000분</MovieRunTime>
+      <MovieName>{name}</MovieName>
+      <MovieRunTime>{runtime}</MovieRunTime>
       <TicketingButton onClick={onClickTiketingButton}>
         예매하기
       </TicketingButton>

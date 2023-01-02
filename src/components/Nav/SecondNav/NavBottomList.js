@@ -38,7 +38,7 @@ const Container = styled.div`
   color: white;
   background-color: #333333;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
 `;
 
 const Menu = styled.div`
