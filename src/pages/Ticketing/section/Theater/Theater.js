@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Theater = () => {
   const [theaterList, setTheaterList] = useState([]);
-  const [getTheaterId, setGetTheaterId] = useState(0);
+  const [theaterId, setTheaterId] = useState(0);
   const [activeLocation, setActiveLocation] = useState('');
 
   useEffect(() => {
@@ -17,22 +17,21 @@ const Theater = () => {
       <Title>극장</Title>
       <Information>
         <TheaterList>
-          {theaterList &&
-            theaterList.map(item => (
-              <List
-                onClick={() => {
-                  setActiveLocation(item.theater_name);
-                  setGetTheaterId(item.theater_id);
-                  fetch(`data/theaters.json`)
-                    .then(response => response.json())
-                    .then(result => setTheaterList(result));
-                }}
-                activeLocation={activeLocation === item.theater_name}
-                key={item.theater_id}
-              >
-                {item.theater_name}점
-              </List>
-            ))}
+          {theaterList.map(item => (
+            <List
+              onClick={() => {
+                setActiveLocation(item.theater_name);
+                setTheaterId(item.theater_id);
+                fetch(`data/theaters.json`)
+                  .then(response => response.json())
+                  .then(result => setTheaterList(result));
+              }}
+              activeLocation={activeLocation === item.theater_name}
+              key={item.theater_id}
+            >
+              {item.theater_name}점
+            </List>
+          ))}
         </TheaterList>
       </Information>
     </TheaterContainer>

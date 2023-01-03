@@ -13,47 +13,51 @@ const Ticketing = () => {
   const [activeTime, setActiveTime] = useState('');
 
   return (
-    <div>
-      <Container>
-        <ContainBox>
-          <ResetBtn onClick={() => window.location.reload()}>
-            <Icon className="fa-solid fa-arrow-rotate-left" />
-            &nbsp;예매 다시하기
-          </ResetBtn>
-          <Wrapper>
+    <Container>
+      <ContainBox>
+        <ResetBtn
+          onClick={() => {
+            setMovieId(0);
+            setActiveLocation('');
+            setActiveTime('');
+          }}
+        >
+          <Icon className="fa-solid fa-arrow-rotate-left" />
+          &nbsp;예매 다시하기
+        </ResetBtn>
+        <Wrapper>
+          <Section>
+            <MovieClass>
+              <Movie />
+            </MovieClass>
+          </Section>
+          <Section>
             <Section>
-              <MovieClass>
-                <Movie />
-              </MovieClass>
+              <Theater />
             </Section>
             <Section>
-              <TheaterClass>
-                <Theater />
-              </TheaterClass>
-              <DateClass>
-                <Date
-                  Ticketing={Ticketing}
+              <Date
+                Ticketing={Ticketing}
+                movieId={movieId}
+                activeLocation={activeLocation}
+              />
+            </Section>
+          </Section>
+          <Section>
+            <TimeContainer>
+              <Section>
+                <Time
+                  activeTime={activeTime}
+                  setActiveTime={setActiveTime}
                   movieId={movieId}
-                  activeLocation={activeLocation}
                 />
-              </DateClass>
-            </Section>
-            <Section>
-              <TimeContainer>
-                <TimeClass>
-                  <Time
-                    activeTime={activeTime}
-                    setActiveTime={setActiveTime}
-                    movieId={movieId}
-                  />
-                </TimeClass>
-              </TimeContainer>
-            </Section>
-          </Wrapper>
-        </ContainBox>
-        <Ticket />
-      </Container>
-    </div>
+              </Section>
+            </TimeContainer>
+          </Section>
+        </Wrapper>
+      </ContainBox>
+      <Ticket />
+    </Container>
   );
 };
 
@@ -108,21 +112,6 @@ const MovieClass = styled.div`
   text-align: center;
 `;
 
-const TheaterClass = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const TimeContainer = styled.div`
   display: flex;
-`;
-
-const DateClass = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const TimeClass = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
