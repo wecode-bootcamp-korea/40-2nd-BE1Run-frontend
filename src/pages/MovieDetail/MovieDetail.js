@@ -3,22 +3,30 @@ import styled from 'styled-components';
 import Stillcut from './Stillcut';
 import Trailer from './Trailer';
 
+const SUB_TITLE_DATA = [
+  { subTitleText: '감독' },
+  { subTitleText: '배우' },
+  { subTitleText: '시간' },
+  { subTitleText: '개봉일' },
+];
+
 const MovieDetail = () => {
-  const [data, setData] = useState([]);
-  // const [trailerData, setTrailerData] = useState([]);
+  const [data, setData] = useState({});
+  const [trailerData, setTrailerData] = useState([]);
 
   useEffect(() => {
-    fetch('http://10.58.52.91:8000/movie/1')
+    fetch('http://10.58.52.60:8000/movie/1')
       .then(res => res.json())
       .then(result => setData(result));
   }, []);
 
-  // useEffect(() => {
-  //   fetch('http://10.58.52.91:8000/movie/trailer/1')
-  //     .then(res => res.json())
-  //     .then(result => setTrailerData(result));
-  // }, []);
+  useEffect(() => {
+    fetch('http://10.58.52.60:8000/movie/trailer/1')
+      .then(res => res.json())
+      .then(result => setTrailerData(result));
+  }, []);
 
+  console.log(trailerData);
   console.log(data);
   // console.log(trailerData);
   return (
@@ -35,27 +43,38 @@ const MovieDetail = () => {
                 {data.title_eng}
               </TitleParagraph>
             </Title>
-            <SubSection>
-              <TitleParagraph fontsize="18" opacity="1">
-                감독 : {data.director}
-              </TitleParagraph>
-              <TitleParagraph fontsize="18" opacity="1">
-                배우 : {data.actors}
-              </TitleParagraph>
-              <TitleParagraph fontsize="18" opacity="1">
-                시간 : {data.duration_min}분
-              </TitleParagraph>
-              <TitleParagraph fontsize="18" opacity="1">
-                개봉일 : {data.opening_date}
-              </TitleParagraph>
-            </SubSection>
+            <SubDiv>
+              <SubSection width={20}>
+                {SUB_TITLE_DATA.map((data, idx) => {
+                  return (
+                    <TitleParagraph fontsize="20" opacity="1" key={idx}>
+                      {data.subTitleText}
+                    </TitleParagraph>
+                  );
+                })}
+              </SubSection>
+              <SubSection width={80}>
+                <TitleParagraph fontsize="20" opacity="1">
+                  {data.director}
+                </TitleParagraph>
+                <TitleParagraph fontsize="20" opacity="1">
+                  {data.actors}
+                </TitleParagraph>
+                <TitleParagraph fontsize="20" opacity="1">
+                  {data.duration_min}분
+                </TitleParagraph>
+                <TitleParagraph fontsize="20" opacity="1">
+                  {data.opening_date}
+                </TitleParagraph>
+              </SubSection>
+            </SubDiv>
           </DetailTextSection>
         </Detailheader>
         <DescriptSection>{data.descriptions}</DescriptSection>
         <SubParagraph>Still Cut</SubParagraph>
         <Stillcut stillcut={data.still_cut_image} />
         <SubParagraph>Trailer</SubParagraph>
-        <Trailer trailer={data.trailer_videos_url} />
+        <Trailer trailer={trailerData} />
         <RemoteBtn>
           <p
             onClick={() => {
@@ -119,11 +138,17 @@ const Title = styled.div`
   border-bottom: 2px #aaa solid;
 `;
 
+const SubDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+`;
+
 const SubSection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 95%;
+  justify-content: space-between;
+  width: ${props => props.width}%;
   height: 150px;
   background-color: antiquewhite;
 `;

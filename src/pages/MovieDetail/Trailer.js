@@ -6,8 +6,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { PrevArrow, NextArrow } from './Stillcut';
 
-const Trailer = () => {
+const Trailer = props => {
   const videoRef = useRef();
+  const { trailer } = props;
 
   const settings = {
     lazyLoad: true,
@@ -27,7 +28,7 @@ const Trailer = () => {
   return (
     <Container>
       <SliderSection {...settings}>
-        {TRAILER_DATA.map(({ trailer }, idx) => {
+        {trailer.trailer_videos_url?.map(({ trailer }, idx) => {
           return (
             <VideoBox key={idx}>
               <Video type="video/mp4" ref={videoRef} controls>
