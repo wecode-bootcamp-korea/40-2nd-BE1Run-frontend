@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import NavBottomList from './NavBottomList';
 import { NAV_LIST } from './navData';
@@ -18,11 +18,6 @@ const SecondNav = () => {
       state: { value: userInput },
     });
   };
-  // event => {
-  //   if (event.keyCode === 13) {
-  //     navigate(`/movies/search?keyword=${userInput}`);
-  //   }
-  // };
 
   return (
     <BorderLine>
@@ -48,6 +43,7 @@ const SecondNav = () => {
               value={userInput}
               type="text"
               onChange={handleSearch}
+              onKeyPress={e => onSubmit(e)}
             />
             <SearchIcon src="/images/Nav/loupe.png" onClick={onSubmit} />
           </SearchBar>
