@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+const ButtonData = [
+  { text: '예매정보 출력', color: 'red', hvColor: 'darkred' },
+  { text: '예매확인/취소', color: '#ffd700', hvColor: 'darkorange' },
+  { text: '메인페이지', color: 'gray', hvColor: '#333333' },
+];
+
 const OrderFinishPage = () => {
-  const [ticketReceipt, setTicketReceipt] = useState([]);
+  const [ticketReceipt, setTicketReceipt] = useState({});
 
   useEffect(() => {
     fetch('/data/ticketInfo.json', {
@@ -13,7 +19,7 @@ const OrderFinishPage = () => {
     })
       .then(response => response.json())
       .then(result => {
-        setTicketReceipt(result[0]);
+        setTicketReceipt(result);
       });
   }, []);
 
@@ -58,9 +64,17 @@ const OrderFinishPage = () => {
           </TicketWrapper>
         </TicketFinish>
         <BookingBtn>
-          <PrintBtn>예매정보 출력</PrintBtn>
-          <CheckBtn>예매확인/취소</CheckBtn>
-          <MessageBtn>메인 페이지</MessageBtn>
+          {ButtonData.map(data => {
+            return (
+              <TicketBtn
+                key={data.text}
+                color={data.color}
+                hoverColor={data.hvColor}
+              >
+                {data.text}
+              </TicketBtn>
+            );
+          })}
         </BookingBtn>
         <Warning>
           <WarningTitle>예매 유의사항</WarningTitle>
@@ -152,54 +166,20 @@ const BookingBtn = styled.div`
   margin: 0 350px;
 `;
 
-const PrintBtn = styled.button`
+const TicketBtn = styled.button`
   text-align: center;
   margin-left: 50px;
   width: 150px;
   height: 50px;
   color: white;
   font-size: 16px;
-  background-color: red;
+  background-color: ${props => props.color};
   border-radius: 5%;
   border: 0;
   outline: 0;
   &:hover {
     cursor: pointer;
-    background-color: darkred;
-  }
-`;
-
-const MessageBtn = styled.button`
-  text-align: center;
-  margin-left: 50px;
-  width: 150px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  background-color: gray;
-  border-radius: 5%;
-  border: 0;
-  outline: 0;
-  &:hover {
-    cursor: pointer;
-    background-color: #333333;
-  }
-`;
-
-const CheckBtn = styled.button`
-  text-align: center;
-  margin-left: 50px;
-  width: 150px;
-  height: 50px;
-  color: white;
-  font-size: 16px;
-  background-color: orange;
-  border-radius: 5%;
-  border: 0;
-  outline: 0;
-  &:hover {
-    cursor: pointer;
-    background-color: darkorange;
+    background-color: ${props => props.hoverColor};
   }
 `;
 

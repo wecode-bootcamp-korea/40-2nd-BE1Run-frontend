@@ -1,15 +1,13 @@
-[
-  {
-    "id": 1,
-    "ticketNumber": "0056-1223-4515-879",
-    "movieTitle": "아바타-물의 길",
-    "theater": "강남",
-    "multiplex": "2관",
-    "date": "2022-12-25",
-    "time": "12:00",
-    "headCount": 2,
-    "seatNumber": ["D1", "D2"],
-    "payment": 30000,
-    "posterImage": "./images/MovieDetail/Avatar.png"
-  }
-]
+{
+  "id": 1,
+  "ticketNumber": "0056-1223-4515-879",
+  "movieTitle": "아바타-물의 길",
+  "theater": "강남",
+  "multiplex": "2관",
+  "date": "2022-12-25",
+  "time": "12:00",
+  "headCount": 2,
+  "seatNumber": ["D1", "D2"],
+  "payment": 30000,
+  "posterImage": "./images/MovieDetail/Avatar.png"
+}
