@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import ListMovieCard from './ListMovieCard';
 
 const MovieList = () => {
-  const [movieCard, setMovieCard] = useState([]);
+  const [movieCards, setMovieCards] = useState([]);
   useEffect(() => {
     fetch('/data/MovieList.json')
       .then(result => result.json())
-      .then(data => setMovieCard(data));
+      .then(data => setMovieCards(data));
   }, []);
 
   return (
@@ -26,14 +26,14 @@ const MovieList = () => {
           </Select>
         </MovieListSort>
         <MovieChart>
-          {movieCard.map(movieCards => {
+          {movieCards.map(movieCard => {
             return (
               <ListMovieCard
-                key={movieCards.id}
-                id={movieCards.id}
-                name={movieCards.name}
-                url={movieCards.url}
-                runtime={movieCards.runtime}
+                key={movieCard.id}
+                id={movieCard.id}
+                name={movieCard.name}
+                url={movieCard.url}
+                runtime={movieCard.runtime}
               />
             );
           })}
