@@ -7,7 +7,11 @@ import PAYMENT_TITLE_DATA from './PaymentTitleData';
 import AGREE_DATA from './AgreeData';
 
 const OrderPage = () => {
-  const [buttonAble, setButtonAble] = useState(0);
+  const [agreeCount, setAgreeCount] = useState(0);
+
+  const ticketPrice = 15000;
+  const totalAgree = 3;
+
   return (
     <OrderPageDiv>
       <Box>
@@ -59,7 +63,7 @@ const OrderPage = () => {
               </Infosection>
               <Infosection width={300} height={80}>
                 <OrderParagragh color={'#666'}>
-                  {ORDER_DATA.headerCount * 15000} 원
+                  {ORDER_DATA.headerCount * ticketPrice} 원
                 </OrderParagragh>
                 <OrderParagragh color={'#666'}>카카오 페이 결제</OrderParagragh>
               </Infosection>
@@ -82,8 +86,8 @@ const OrderPage = () => {
                     type="checkbox"
                     onClick={e => {
                       e.target.checked
-                        ? setButtonAble(buttonAble + 1)
-                        : setButtonAble(buttonAble - 1);
+                        ? setAgreeCount(agreeCount + 1)
+                        : setAgreeCount(agreeCount - 1);
                     }}
                   />
                   {data.text}
@@ -92,10 +96,7 @@ const OrderPage = () => {
             })}
           </FooterSection>
           <FooterSection>
-            <PayBtn
-              disabled={buttonAble >= 3 ? false : true}
-              onClick={() => {}}
-            >
+            <PayBtn disabled={agreeCount !== totalAgree} onClick={() => {}}>
               결제하기
             </PayBtn>
           </FooterSection>
