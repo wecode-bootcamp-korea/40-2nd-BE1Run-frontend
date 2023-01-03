@@ -1,15 +1,18 @@
-import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import qs from 'qs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Auth = () => {
-  const REST_API_KEY = '59bb969ce2c3aaf4dbbeaf8d523ed2ce';
-  const REDIRECT_URI = 'http://localhost:3000/oauth/kakao/callback';
-  const CLIENT_SECRET = 'k5coT2Iask4lJce1rsUDG69Om3yqq9x3';
+  const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
+  const CLIENT_SECRET = process.env.REACT_APP_REST_CLIENT_SECRET;
 
-  const code = new URL(window.location.href).searchParams.get('code');
+  const REDIRECT_URI = 'http://localhost:3000/oauth/kakao/callback';
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const code = searchParams.get('code');
+
   const navigate = useNavigate();
 
   const getToken = async () => {
@@ -26,23 +29,18 @@ const Auth = () => {
         payload
       );
 
-      const Token = res.data.access_token;
-      console.log(res);
-      console.log(Token);
+      const token = res.data.access_token;
 
-      const res2 = await axios.post(
+      const accessTokenPost = await axios.post(
         'http://10.58.52.159:8000/auth/kakao/signin',
         {},
         {
-          headers: { Authorization: Token },
+          headers: { Authorization: token },
         }
       );
+      const ourToken = accessTokenPost.data.accessToken;
 
-      console.log(res2);
-
-      const OurToken = res2.data.accessToken;
-
-      localStorage.setItem('token', OurToken);
+      localStorage.setItem('token', ourToken);
       navigate('/');
     } catch (err) {
       console.log(err);

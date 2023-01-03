@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Modal from '../../Modal/Modal';
+import LoginBtn from '../../Modal/LoginBtn';
 
 const FirstNav = () => {
   return (
@@ -15,7 +15,7 @@ const FirstNav = () => {
         </Logo>
         <UserIconDiv>
           <IconMapDiv>
-            <Modal />
+            <LoginBtn />
             {ICON_LIST.map(item => (
               <StyleLink to={item.goto} key={item.id}>
                 <IconImg src={item.url} />

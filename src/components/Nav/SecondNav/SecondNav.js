@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import NavBottomList from './NavBottomList';
 import { NAV_LIST } from './navData';
 
 const SecondNav = () => {
   const [isShow, setIsShow] = useState(false);
+  const [userInput, setUserInput] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = event => {
+    setUserInput(event.target.value);
+  };
+
+  const onSubmit = () => {
+    navigate(`/movies/search?keyword=${userInput}`, {
+      state: { value: userInput },
+    });
+  };
 
   return (
     <BorderLine>
@@ -20,9 +33,16 @@ const SecondNav = () => {
               );
             })}
           </NavDropdownList>
+
           <SearchBar>
-            <Input />
-            <SearchIcon src="/images/Nav/loupe.png" />
+            <Input
+              id="search"
+              value={userInput}
+              type="text"
+              onChange={handleSearch}
+              onKeyPress={onSubmit}
+            />
+            <SearchIcon src="/images/Nav/loupe.png" onClick={onSubmit} />
           </SearchBar>
         </Wrapper>
         <NavBottomList
@@ -50,7 +70,6 @@ const Container = styled.div`
   flex-direction: column;
   color: white;
   width: 1500px;
-  /* z-index: -999; */
 `;
 
 const Wrapper = styled.div`
@@ -75,22 +94,25 @@ const NavDropdownTitle = styled.h1`
   cursor: pointer;
 `;
 
-const SearchBar = styled.div`
+const SearchBar = styled.form`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  position: relative;
   width: 300px;
   margin: 15px 0 0 100px;
   padding: 2px;
+  overflow: auto;
 `;
 
 const Input = styled.input`
-  width: 280px;
+  width: 260px;
   height: 30px;
   border-top: 0px;
   border-bottom: 0px;
   border-left: 1px solid gray;
   border-right: 1px solid gray;
-  padding: 10px 50px 10px 10px;
+  padding: 10px 20px 10px 30px;
+  -webkit-appearance: none;
   font-size: 18px;
   position: relative;
   &:focus {
@@ -100,7 +122,12 @@ const Input = styled.input`
 
 const SearchIcon = styled.img`
   width: 28px;
+  display: flex;
+  width: 20px;
   position: absolute;
+  justify-content: space-between;
   padding-top: 1px;
   margin-right: 10px;
+  top: 5px;
+  left: 30px;
 `;

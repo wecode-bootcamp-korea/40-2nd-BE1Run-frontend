@@ -8,9 +8,9 @@ import OrderPage from './pages/OrderPage/OrderPage';
 import OrderFinishPage from './pages/OrderFinishPage/OrderFinishPage';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
-//TODO : nav 연결시 삭제 예정
-import Modal from './components/Modal/Modal';
 import Seatpage from './pages/SeatPage/Seatpage';
+import Auth from './components/Login/Auth';
+import Search from './components/Nav/SecondNav/Search';
 
 const Router = () => {
   return (
@@ -23,9 +23,9 @@ const Router = () => {
         <Route path="/movie-list" element={<MovieList />} />
         <Route path="/order-page" element={<OrderPage />} />
         <Route path="/order-finish-page" element={<OrderFinishPage />} />
-        {/* TODO : nav 연결시 삭제 예정 */}
-        <Route path="/modal" element={<Modal />} />
+        <Route path="/oauth/kakao/callback" element={<Auth />} />
         <Route path="/seat-page" element={<Seatpage />} />
+        <Route path="/movies/search" element={<Search />} />
       </Routes>
       <Footer />
     </BrowserRouter>
