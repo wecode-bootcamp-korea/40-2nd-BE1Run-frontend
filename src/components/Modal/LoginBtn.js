@@ -3,18 +3,16 @@ import Login from '../Login/Login';
 import styled from 'styled-components';
 import useOutSideClick from '../../utils/hooks/useOutSideClick';
 
-const Modal = () => {
+const LoginBtn = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
 
   const modalOpen = () => {
     setIsVisible(true);
-    document.body.style.overflow = 'hidden';
   };
 
   const modalClose = () => {
     setIsVisible(false);
-    document.body.style.overflow = 'scroll';
   };
 
   useOutSideClick(ref, modalClose);
@@ -31,7 +29,7 @@ const Modal = () => {
     </Container>
   );
 };
-export default Modal;
+export default LoginBtn;
 
 const Container = styled.div`
   text-align: center;

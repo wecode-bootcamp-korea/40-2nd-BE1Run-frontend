@@ -8,7 +8,7 @@ const Login = () => {
   const [paraTop, setParaTop] = useState(40);
   const [fontsize, setFontSize] = useState(20);
 
-  const REST_API_KEY = '59bb969ce2c3aaf4dbbeaf8d523ed2ce';
+  const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
   const REDIRECT_URI = 'http://localhost:3000/oauth/kakao/callback';
   const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
