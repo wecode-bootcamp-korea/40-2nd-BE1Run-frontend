@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const MainMovieCard = props => {
-  const { id, url, name, runtime } = props;
+const MainMovieCard = ({ id, url, name, runtime, age }) => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -14,7 +13,6 @@ const MainMovieCard = props => {
   };
   const onClickDetailButton = () => {
     navigate(`/movie-detail/${id}`);
-    // navigate(`/movie-detail/`);s
   };
 
   return (
@@ -29,7 +27,7 @@ const MainMovieCard = props => {
       >
         <PosterThumnail src={url} alt="영화썸네일" />
         {isVisible === false ? (
-          <OffMouse> {id}</OffMouse>
+          <OffMouse>{age === 0 ? '전체이용가' : ` ${age}세이용가`}</OffMouse>
         ) : (
           <OnMouse>
             <DetailButton onClick={onClickDetailButton}>상세보기</DetailButton>
@@ -40,7 +38,7 @@ const MainMovieCard = props => {
         )}
       </MovieThumnail>
       <MovieName>{name}</MovieName>
-      <MovieRunTime>{runtime}</MovieRunTime>
+      <MovieRunTime>{runtime}분</MovieRunTime>
     </Container>
   );
 };
@@ -62,9 +60,12 @@ const MovieThumnail = styled.div`
 
 const OffMouse = styled.div`
   position: absolute;
-  top: 0;
+  top: 2px;
+  left: 2px;
   color: white;
-  font-size: 50px;
+  background-color: gray;
+  font-size: 20px;
+  font-weight: bold;
   font-style: italic;
 `;
 
@@ -116,7 +117,7 @@ const TicketingButton = styled.button`
 const MovieName = styled.div`
   text-align: center;
   padding-top: 20px;
-  font-size: 25px;
+  font-size: 23px;
 `;
 
 const MovieRunTime = styled.div`

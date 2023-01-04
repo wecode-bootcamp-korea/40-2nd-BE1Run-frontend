@@ -5,12 +5,18 @@ import ListMovieCard from './ListMovieCard';
 
 const MovieList = () => {
   const [movieCards, setMovieCards] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    fetch('/data/MovieList.json')
-      .then(result => result.json())
-      .then(data => setMovieCards(data));
+    fetch('http://10.58.52.80:8000/movies/')
+      .then(response => response.json())
+      .then(result => {
+        setMovieCards(result);
+        setLoading(false);
+      });
   }, []);
 
+  if (loading) return;
   return (
     <Container>
       <Contents>
@@ -26,14 +32,16 @@ const MovieList = () => {
           </Select>
         </MovieListSort>
         <MovieChart>
-          {movieCards.map(movieCard => {
+          {movieCards.map((movieInfo, idx) => {
             return (
               <ListMovieCard
-                key={movieCard.id}
-                id={movieCard.id}
-                name={movieCard.name}
-                url={movieCard.url}
-                runtime={movieCard.runtime}
+                key={movieInfo.id}
+                id={movieInfo.id}
+                name={movieInfo.title}
+                url={movieInfo.thumbnail_image_url}
+                runtime={movieInfo.duration_min}
+                age={movieInfo.age_limit}
+                number={idx}
               />
             );
           })}
