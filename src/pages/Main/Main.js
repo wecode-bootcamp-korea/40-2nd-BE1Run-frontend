@@ -49,11 +49,15 @@ function SamplePrevArrow(props) {
 const Main = () => {
   const [mainMovie, setMainMovie] = useState([]);
   const videoRef = useRef();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/maindata.json')
-      .then(result => result.json())
-      .then(data => setMainMovie(data));
+    fetch('http://10.58.52.80:8000/movies/')
+      .then(response => response.json())
+      .then(result => {
+        setMainMovie(result);
+        setLoading(false);
+      });
   }, []);
 
   const settings = {
@@ -66,6 +70,7 @@ const Main = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
+  if (loading) return;
   return (
     <Container>
       <MovieVideo>
@@ -109,9 +114,10 @@ const Main = () => {
               <MainMovieCard
                 key={mainMovies.id}
                 id={mainMovies.id}
-                name={mainMovies.name}
-                url={mainMovies.url}
-                runtime={mainMovies.runtime}
+                name={mainMovies.title}
+                url={mainMovies.thumbnail_image_url}
+                runtime={mainMovies.duration_min}
+                age={mainMovies.age_limit}
               />
             );
           })}

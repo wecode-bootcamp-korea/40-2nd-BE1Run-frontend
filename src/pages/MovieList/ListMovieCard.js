@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ListMovieCard = props => {
-  const { id, url, name, runtime } = props;
+  const { id, url, name, runtime, age, number } = props;
   const navigate = useNavigate();
 
   const onClickTiketingButton = () => {
@@ -15,7 +15,7 @@ const ListMovieCard = props => {
 
   return (
     <Container>
-      <MovieNumber>No.{id}</MovieNumber>
+      <MovieNumber>No.{number + 1}</MovieNumber>
       <MovieThumnail>
         <PosterThumnail
           src={url}
@@ -24,7 +24,8 @@ const ListMovieCard = props => {
         />
       </MovieThumnail>
       <MovieName>{name}</MovieName>
-      <MovieRunTime>{runtime}</MovieRunTime>
+      <MovieRunTime>{runtime}분</MovieRunTime>
+      <AgeLimit>{age === 0 ? '전체이용가' : ` ${age}세이용가`}</AgeLimit>
       <TicketingButton onClick={onClickTiketingButton}>
         예매하기
       </TicketingButton>
@@ -58,8 +59,8 @@ const MovieThumnail = styled.div`
 `;
 
 const PosterThumnail = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 220px;
+  height: 280px;
   border-radius: 10px;
   cursor: pointer;
 `;
@@ -85,5 +86,9 @@ const MovieName = styled.div`
 
 const MovieRunTime = styled.div`
   padding-top: 10px;
+  padding-bottom: 10px;
+`;
+
+const AgeLimit = styled.div`
   padding-bottom: 10px;
 `;
