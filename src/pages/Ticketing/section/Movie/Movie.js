@@ -1,17 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
-const Movie = () => {
-  const [movieList, setMovieList] = useState([]);
-  const [activeMovie, setActiveMovie] = useState('');
-  const [getMovieId, setGetMovieId] = useState(0);
-
-  useEffect(() => {
-    fetch('/data/ticketingList.json')
-      .then(response => response.json())
-      .then(result => setMovieList(result));
-  }, []);
-
+const Movie = ({ ticketInfo, setTicketInfo, ticketingData }) => {
   return (
     <MovieContainer>
       <Title>영화</Title>
@@ -20,24 +10,26 @@ const Movie = () => {
           <AgeLimit>연령</AgeLimit>
           <MovieName>제목</MovieName>
         </Top>
-        <MovieList key={getMovieId.id}>
-          {movieList &&
-            movieList.map(item => (
-              <List
-                onClick={() => {
-                  setActiveMovie(item.name);
-                  setGetMovieId(item.id);
-                  fetch(`data/movieList.json`)
-                    .then(response => response.json())
-                    .then(result => setMovieList(result));
-                }}
-                activeMovie={activeMovie === item.name}
-                key={item.id}
-              >
-                <Age>{item.age_grade}</Age>
-                {item.name}
-              </List>
-            ))}
+        <MovieList>
+          {ticketingData?.map(item => (
+            <List
+              onClick={() => {
+                setTicketInfo({
+                  ...ticketInfo,
+                  title: item.title,
+                  age: item.age_limit,
+                  img: item.thumbnail_image_url,
+                  duration: item.duration_min,
+                  hall: item.id,
+                });
+              }}
+              activeMovie={ticketInfo.title === item.title}
+              key={item.id}
+            >
+              <Age>{item.age_limit}</Age>
+              {item.title}
+            </List>
+          ))}
         </MovieList>
       </Information>
     </MovieContainer>

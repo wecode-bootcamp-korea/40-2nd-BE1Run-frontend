@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const Theater = () => {
+const Theater = ({ ticketInfo, setTicketInfo, ticketingData }) => {
   const [theaterList, setTheaterList] = useState([]);
-  const [getTheaterId, setGetTheaterId] = useState(0);
   const [activeLocation, setActiveLocation] = useState('');
 
   useEffect(() => {
@@ -17,20 +16,17 @@ const Theater = () => {
       <Title>극장</Title>
       <Information>
         <TheaterList>
-          {theaterList &&
-            theaterList.map(item => (
+          {ticketingData &&
+            ticketingData.map(item => (
               <List
                 onClick={() => {
-                  setActiveLocation(item.theater_name);
-                  setGetTheaterId(item.theater_id);
-                  fetch(`data/theaters.json`)
-                    .then(response => response.json())
-                    .then(result => setTheaterList(result));
+                  setActiveLocation(item.name);
+                  setTicketInfo({ ...ticketInfo, loc: item.name });
                 }}
-                activeLocation={activeLocation === item.theater_name}
-                key={item.theater_id}
+                activeLocation={activeLocation === item.name}
+                key={item.id}
               >
-                {item.theater_name}점
+                {item.name}
               </List>
             ))}
         </TheaterList>

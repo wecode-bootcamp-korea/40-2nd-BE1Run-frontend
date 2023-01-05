@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import INFO_DATA from './INFODATA';
-import ORDER_DATA from './ORDERDATA';
 import ORDER_TITLE_DATA from './OrderTitleData';
 import PAYMENT_TITLE_DATA from './PaymentTitleData';
 import AGREE_DATA from './AgreeData';
 
 const OrderPage = () => {
   const [agreeCount, setAgreeCount] = useState(0);
+
+  const location = useLocation();
+
+  const { title, img, date, hall, seat, max, loc } = location.state;
 
   const ticketPrice = 15000;
   const totalAgree = 3;
@@ -26,7 +30,7 @@ const OrderPage = () => {
             </InfoHeader>
             <OrderBody>
               <Imgsection>
-                <InfoImg src={ORDER_DATA.img} />
+                <InfoImg src={img} />
               </Imgsection>
               <Infosection width={80} height={160}>
                 {ORDER_TITLE_DATA.map(data => {
@@ -38,9 +42,11 @@ const OrderPage = () => {
                 })}
               </Infosection>
               <Infosection width={400} height={160}>
-                {ORDER_DATA.exp.map((d, idx) => {
-                  return <OrderParagragh key={idx}>{d.value}</OrderParagragh>;
-                })}
+                <OrderParagragh>{title}</OrderParagragh>
+                <OrderParagragh>{loc}</OrderParagragh>
+                <OrderParagragh>{hall}</OrderParagragh>
+                <OrderParagragh>{date}</OrderParagragh>
+                <OrderParagragh>{seat.join(', ')}</OrderParagragh>
               </Infosection>
             </OrderBody>
           </OrderInfo>
@@ -63,7 +69,7 @@ const OrderPage = () => {
               </Infosection>
               <Infosection width={300} height={80}>
                 <OrderParagragh color={'#666'}>
-                  {ORDER_DATA.headerCount * ticketPrice} 원
+                  {(max * ticketPrice).toLocaleString()} 원
                 </OrderParagragh>
                 <OrderParagragh color={'#666'}>카카오 페이 결제</OrderParagragh>
               </Infosection>

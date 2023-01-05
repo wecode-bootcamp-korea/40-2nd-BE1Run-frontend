@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import SEAT_DATA from './SeatData';
 import resetBtn from '../../assets/images/resetBtn.png';
 import unChecked from '../../assets/images/unchecked.png';
 import checkedImg from '../../assets/images/checked.png';
 import disabled from '../../assets/images/disabled.png';
-import Ticket from '../../components/Ticket/Ticket';
+import Ticket from './Ticket';
 
 const HEAD_COUNTS = [
   { id: 0, count: 1 },
@@ -23,15 +23,43 @@ const RAW_COUNT = [
 
 const Seatpage = () => {
   const [max, setMax] = useState(0);
-  const [selectedSeats, setSelectedSeats] = useState([]);
+  const [seat, setSeat] = useState([]);
+  const {
+    state: { ticketInfo },
+  } = useLocation();
+  const { title, loc, date, time, hall, duration } = ticketInfo;
+
+  const INITIAL_TICKET_INFO = { ...ticketInfo, seat: [] };
+
+  const [ticketInfoData, setTicketInfoData] = useState(INITIAL_TICKET_INFO);
 
   const handleSelect = seatId => {
-    if (selectedSeats.includes(seatId)) {
-      setSelectedSeats(selectedSeats.filter(id => seatId !== id));
+    if (ticketInfoData.seat.includes(seatId)) {
+      setTicketInfoData({
+        ...ticketInfoData,
+        seat: ticketInfoData.seat.filter(id => seatId !== id),
+      });
     } else {
-      setSelectedSeats(selectedSeats.concat(seatId));
+      setTicketInfoData({
+        ...ticketInfoData,
+        seat: ticketInfoData.seat.concat(seatId),
+      });
     }
   };
+
+  useEffect(() => {
+    fetch(
+      `http://10.58.52.60:8000/reservation/seats?movie=${title}&theater=${loc}&date=${date}&time=${time}:00`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+      }
+    )
+      .then(response => response.json())
+      .then(result => setSeat(result.seat));
+  }, []);
 
   return (
     <>
@@ -50,7 +78,10 @@ const Seatpage = () => {
                         value={count}
                         onClick={() => {
                           setMax(count);
-                          setSelectedSeats([]);
+                          setTicketInfoData({
+                            ...INITIAL_TICKET_INFO,
+                            max: count,
+                          });
                         }}
                       />
                       <RadioDiv
@@ -66,10 +97,10 @@ const Seatpage = () => {
               {max === 0 && <WarningText>인원을 선택해 주세요</WarningText>}
             </HeaderSection>
             <HeaderSection width={55} color={'white'}>
-              <HeaderDiv>영화관 : {SEAT_DATA.loc}</HeaderDiv>
-              <HeaderDiv>상영관 : {SEAT_DATA.theotor}</HeaderDiv>
-              <HeaderDiv>상영날짜 : {SEAT_DATA.date}</HeaderDiv>
-              <HeaderDiv>시간 : {SEAT_DATA.runningTime} 분</HeaderDiv>
+              <HeaderDiv>영화관 : {loc}</HeaderDiv>
+              <HeaderDiv>상영관 : {hall} 관</HeaderDiv>
+              <HeaderDiv>상영날짜 : {date}</HeaderDiv>
+              <HeaderDiv>시간 : {duration} 분</HeaderDiv>
             </HeaderSection>
           </SeatHeader>
           <SeatBody>
@@ -78,13 +109,12 @@ const Seatpage = () => {
               <ResetBtn
                 resetBtn={resetBtn}
                 onClick={() => {
-                  setSelectedSeats([]);
-                  // setMax(0);
+                  setTicketInfoData(INITIAL_TICKET_INFO);
                 }}
               />
             </Screen>
             <SeatSection>
-              {SEAT_DATA.seat.map((status, idx) => {
+              {seat.map((status, idx) => {
                 return (
                   <Seat
                     seatnum={status.id}
@@ -95,11 +125,11 @@ const Seatpage = () => {
                     disabledImg={disabled}
                     disabled={
                       status.status === 1 ||
-                      (selectedSeats.length >= max &&
-                        !selectedSeats.includes(status.id))
+                      (ticketInfoData.seat.length >= max &&
+                        !ticketInfoData.seat.includes(status.id))
                     }
-                    checked={selectedSeats.includes(status.id)}
-                    onClick={() => handleSelect(status.id)}
+                    checked={ticketInfoData.seat.includes(status.id)}
+                    onClick={() => handleSelect(status.id, status.seat_name)}
                   />
                 );
               })}
@@ -112,7 +142,7 @@ const Seatpage = () => {
           </SeatBody>
         </SeatDiv>
       </SeatPage>
-      <Ticket />
+      <Ticket ticketInfo={ticketInfoData} max={max} />
     </>
   );
 };
@@ -262,6 +292,7 @@ const RawTitle = styled.section`
 `;
 
 const Seat = styled.input`
+  position: relative;
   margin-right: ${props =>
     props.seatnum === 6 ||
     props.seatnum % 8 === 6 ||
@@ -290,4 +321,8 @@ const Seat = styled.input`
     background-position: 50%;
     background-repeat: no-repeat;
   }
+`;
+
+const seatName = styled.p`
+  position: absolute;
 `;
