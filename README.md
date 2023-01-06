@@ -32,15 +32,13 @@
 
 # 구현 기능  FrontEnd
 
-| 로그인 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> |
+| 카카오 로그인 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> |
 | :--: | :--: |
-| 네비게이션  | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> |
+| 예매  | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> |
 | 상세페이지 모달 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210951929-64417843-3293-417a-99be-76ed613fc82c.gif> |
 | 메인페이지 fadein | <img width=50% src=https://user-images.githubusercontent.com/117628412/210951924-56f35569-ab91-49e6-8b75-505b550f3a65.gif> |
 | 검색 | <img width=50% src="https://user-images.githubusercontent.com/117628412/210951666-68158454-2337-4adf-a93a-631a851b5908.gif"> |  
   
- 
-  https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif
 
   
 <h1>ENDING CREDIT</h1>
