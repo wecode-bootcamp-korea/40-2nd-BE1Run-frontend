@@ -15,22 +15,35 @@
 |<img width="95px" height="95px" src="     " alt="avatar" />               |<img width="95px" height="95px" src="     " alt="avatar" />                |<img width="95px" height="95px" src="       " alt="avatar" />               |
 | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/mikio999) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/Godspear88) | [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>](https://github.com/Oh9yu) |
 
+  
+###  사용기술 스택
+
+
+### Front-End
+|JavaScript|React|Styled <br/> Components|esLint|Prettier|
+| :--: | :--: | :--: | :--: | :--: |
+| <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://styled-components.com/logo.png" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/eslint-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/prettier-icon.svg" alt="icon" width="65" height="65" /> |
+
+### Back-End
+
+|JavaScript|Nodejs|MySql|Rest|
+| :--: | :--: | :--: | :--: |
+| <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/nginx-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="65" height="65" /> | <img src="https://techstack-generator.vercel.app/restapi-icon.svg" alt="icon" width="65" height="65" /> |
 
 # 구현 기능  FrontEnd
 
-| 로그인 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210352969-c0388e86-f8b1-417a-ae48-fa3073a3166e.gif> |
+| 로그인 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> |
 | :--: | :--: |
-| 회원가입 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210353217-4f7275be-f915-47b5-b31c-cb08660d038a.gif> |
-| 네비게이션  | <img width=50% src=[https://user-images.githubusercontent.com/117628412/210353127-faa27bc4-c00c-4bc0-9da8-f1eb6b4ba8ae.gif](https://user-images.githubusercontent.com/117628412/210949583-65f2e0f1-2e74-4e58-81db-56b436c99595.gif)> |
-| 상세페이지 모달 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210949583-65f2e0f1-2e74-4e58-81db-56b436c99595.gif> |
-| 메인페이지 fadein | <img width=50% src=https://user-images.githubusercontent.com/117628412/210353855-ee47954d-c5af-46d3-85d1-49ac586d5179.gif> |
-| 검색 | <img width=50% src="https://user-images.githubusercontent.com/117628412/210353734-7466faa2-99cd-48ec-86f3-f8dfe9ad36ad.gif"> |  
+| 네비게이션  | <img width=50% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> |
+| 상세페이지 모달 | <img width=50% src=https://user-images.githubusercontent.com/117628412/210951929-64417843-3293-417a-99be-76ed613fc82c.gif> |
+| 메인페이지 fadein | <img width=50% src=https://user-images.githubusercontent.com/117628412/210951924-56f35569-ab91-49e6-8b75-505b550f3a65.gif> |
+| 검색 | <img width=50% src="https://user-images.githubusercontent.com/117628412/210951666-68158454-2337-4adf-a93a-631a851b5908.gif"> |  
+  
+ 
+  https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif
 
   
- ![디테일페이지](https://user-images.githubusercontent.com/117628412/210949583-65f2e0f1-2e74-4e58-81db-56b436c99595.gif)
-  
-  https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif
-  
 <h1>ENDING CREDIT</h1>
-  
-<img >(https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif)
+ 
+ ![BE1Run크래딧 (1)](https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif)
+
