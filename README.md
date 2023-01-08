@@ -33,9 +33,14 @@
 <img height=30 src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
 <img height=30 src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white"/>
 <img height=30 src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/>
-<a href='https://trello.com/b/eWjUbRVY/be1run'><img height=30 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" /></a>
   
 </div>
+
+# <img height=30 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" />
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/117628412/211187156-02722522-8b04-4b26-aff2-2cad1940cfdb.png">
+
+
 
 </br>
 
