@@ -1,5 +1,5 @@
 
-![waving](https://capsule-render.vercel.app/api?type=waving&width=150%&height=200&fontAlignY=40&text=BE1RUN&color=gradient)
+![waving](https://capsule-render.vercel.app/api?type=waving&width=150%&height=200&fontAlignY=40&text=🎞BE1RUN&color=gradient)
 
 #  Developers 
 
@@ -36,30 +36,30 @@
   
 </div>
 
+
+# LINK TO 👉🏻
+
+<div>
+<a href='                  '><img width=120 src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
+</div>
+
 # <img height=30 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" />
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/117628412/211187156-02722522-8b04-4b26-aff2-2cad1940cfdb.png">
 
 
-
 </br>
 
-# LINK TO 👉🏻
+# DB
 
-<div>
-<a href='https://prairie-zipper-83c.notion.site/Team-Notion-b4495c87e78040c4958807d54115ee3f'><img width=120 src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
-</div>
+<img width="600" alt="DB" src="https://user-images.githubusercontent.com/117628412/211188024-5495a20f-5a9c-4d61-90ec-db4b9db05e95.png">
 
-</br>
-
+# 구현 기능
 
 # <a href='https://drive.google.com/file/d/1fgwpEu5IgjQX7lrjAShAf01ENlRPfQrH/view?usp=sharing'><img width=30 src="https://user-images.githubusercontent.com/117628412/211185276-d5178cc8-f2bf-4845-8ad9-d2cb158c5f12.png"> DEMO VIDEO </a>
 
 
-
-# 구현 기능
-
-| 카카오 로그인 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> | <ul><li>zzzasdfasdfsdafadsfadsfadsfadfasdfasdfz<li>zzz</li><ul> |
+| 카카오 로그인 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> | <ul><li></li><ul> |
 | :--: | :--: | :--: |
 | 예매 페이지  | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> | |
 | 리스트 페이지 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210951929-64417843-3293-417a-99be-76ed613fc82c.gif> | |
