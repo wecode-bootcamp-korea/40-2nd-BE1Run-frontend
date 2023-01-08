@@ -29,25 +29,26 @@
 # TOOLS
 
 <div>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
-<img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white"/>
-<img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/>
+<img height=30 src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/>
+<img height=30 src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
+<img height=30 src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white"/>
+<img height=30 src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/>
+<a href='https://trello.com/b/eWjUbRVY/be1run'><img height=30 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" /></a>
+  
 </div>
 
 </br>
 
-# LINK TO 👉🏻 Trello, Notion
+# LINK TO 👉🏻
 
 <div>
-<a href='https://trello.com/b/eWjUbRVY/be1run'><img width=120 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" /></a>
 <a href='https://prairie-zipper-83c.notion.site/Team-Notion-b4495c87e78040c4958807d54115ee3f'><img width=120 src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
 </div>
 
 </br>
 
 
-#  <a href='https://drive.google.com/file/d/1fgwpEu5IgjQX7lrjAShAf01ENlRPfQrH/view?usp=sharing'>시연영상 <img width=30 src="https://user-images.githubusercontent.com/117628412/211185276-d5178cc8-f2bf-4845-8ad9-d2cb158c5f12.png"></a>
+# <a href='https://drive.google.com/file/d/1fgwpEu5IgjQX7lrjAShAf01ENlRPfQrH/view?usp=sharing'><img width=30 src="https://user-images.githubusercontent.com/117628412/211185276-d5178cc8-f2bf-4845-8ad9-d2cb158c5f12.png"> DEMO VIDEO </a>
 
 
 
