@@ -1,6 +1,10 @@
 
 ![waving](https://capsule-render.vercel.app/api?type=waving&width=150%&height=200&fontAlignY=40&text=🎞BE1RUN&color=gradient)
 
+<h1>좌석 예매 사이트 모델링<h1>
+
+<h2><a href="https://terrific-sulfur-0da.notion.site/PET-4b6650feedae4784bb16339bfc14649d">기업분석<a/><h2/>
+
 #  Developers 
 
 ### Back-End Developers 
