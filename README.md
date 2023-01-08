@@ -39,6 +39,6 @@
 | 메인 페이지  | <img width=100% src=https://user-images.githubusercontent.com/117628412/210951924-56f35569-ab91-49e6-8b75-505b550f3a65.gif> |
 | 상세 페이지 | <img width=100% src="https://user-images.githubusercontent.com/117628412/210951666-68158454-2337-4adf-a93a-631a851b5908.gif"> |  
   
-<img width=100% src="https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif">
+<!--<img width=100% src="https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif">-->
  
 
