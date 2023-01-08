@@ -40,7 +40,7 @@
 # LINK TO 👉🏻 Trello, Notion
 
 <div>
-<a href='https://trello.com/b/k1QJ1bBl/40%EA%B8%B0-niweke-1st-project'><img src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" /></a>
+<a href='https://trello.com/b/eWjUbRVY/be1run'><img src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" /></a>
 <a href='https://prairie-zipper-83c.notion.site/Team-Notion-b4495c87e78040c4958807d54115ee3f'><img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
 </div>
 
@@ -53,7 +53,7 @@
 
 # 구현 기능
 
-| 카카오 <br> 로그인 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> | <ul><li>zzzasdfasdfsdafadsfadsfadsfadfasdfasdfz<li>zzz</li><ul> |
+| 카카오 로그인 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> | <ul><li>zzzasdfasdfsdafadsfadsfadsfadfasdfasdfz<li>zzz</li><ul> |
 | :--: | :--: | :--: |
 | 예매 페이지  | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> | |
 | 리스트 페이지 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210951929-64417843-3293-417a-99be-76ed613fc82c.gif> | |
