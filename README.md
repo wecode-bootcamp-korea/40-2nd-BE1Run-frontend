@@ -40,7 +40,8 @@
 # LINK TO 👉🏻
 
 <div>
-<a href='                  '><img width=120 src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
+<!-- 노션 링크 -->
+<a href='       '><img width=120 src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/></a>
 </div>
 
 # <img height=30 src="https://img.shields.io/badge/Trello-0052CC?style=flat&logo=Trello&logoColor=white" />
