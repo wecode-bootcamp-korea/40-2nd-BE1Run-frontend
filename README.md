@@ -56,7 +56,7 @@
 
 # 구현 기능
 
-# <a href='https://drive.google.com/file/d/1fgwpEu5IgjQX7lrjAShAf01ENlRPfQrH/view?usp=sharing'><img width=30 src="https://user-images.githubusercontent.com/117628412/211185276-d5178cc8-f2bf-4845-8ad9-d2cb158c5f12.png"> DEMO VIDEO </a>
+# <a href='https://drive.google.com/file/d/1fgwpEu5IgjQX7lrjAShAf01ENlRPfQrH/view?usp=sharing'><img width=30 src="https://user-images.githubusercontent.com/117628412/211185276-d5178cc8-f2bf-4845-8ad9-d2cb158c5f12.png"> DEMO VIDEO LINK </a>
 
 
 | 카카오 로그인 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952354-b237da6c-c12f-45fe-8e0a-f10adc60ecf3.gif> | <ul><li></li><ul> |
