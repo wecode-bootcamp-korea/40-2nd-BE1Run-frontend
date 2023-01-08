@@ -66,7 +66,7 @@
 | 검색 기능 | <img width=100% src=https://user-images.githubusercontent.com/117628412/211188852-37163b85-9a34-4473-a2c9-92ee75a3a8ad.gif> | <ul><li>곽민경 : 검색바 레이아웃 <br/> 및 검색 기능 구현</li><li>김영석 : BE 검색 기능</li><ul> |
 | 리스트 페이지 | <img width=100% src=https://user-images.githubusercontent.com/117628412/210951929-64417843-3293-417a-99be-76ed613fc82c.gif> | <ul><li>신창훈 : 리스트 페이지 레이아웃 <br/>및 map 함수로 기능 구현</li><li>윤형준 : BE 리스트 페이지</li><ul> |
 | 상세 페이지 | <img width=100% src="https://user-images.githubusercontent.com/117628412/210951666-68158454-2337-4adf-a93a-631a851b5908.gif"> | <ul><li>권오규 : 상세 페이지 레이아웃 <br/> 영상 재생 및 스틸컷 캐러셀 기능</li> <li>신창훈 : 상세 페이지 영상 재생 <br/>및 스틸컷 캐러셀 기능</li><li>윤형준 : BE 상세페이지</li><ul> |
-| 예매 페이지  | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> | <ul><li>권오규 : 좌석 페이지 레이아웃 <br/> 예매 기능 로직 구현 <br/> Redux toolkit 적용 <br/> 결제 페이지</li><li>곽민경 : 예매 페이지 레이아웃 <br/> day-picker 적용 <br/> 결제완료 페이지</li><li>윤형준 : BE 예매 기능</li><ul> |
+| 예매 페이지  | <img width=100% src=https://user-images.githubusercontent.com/117628412/210952089-8725e9c6-502b-4cc1-917b-b45ac2f5294b.gif> | <ul><li>권오규 : 좌석 페이지 레이아웃 <br/> 예매 기능 로직 구현  결제 페이지</li><li>곽민경 : 예매 페이지 레이아웃 <br/> day-picker 적용 <br/> 결제완료 페이지</li><li>윤형준 : BE 예매 기능</li><ul> |
   
 <!--<img width=100% src="https://user-images.githubusercontent.com/117628412/210950321-ba700d68-3268-4c24-b65b-8cf87b64befb.gif">-->
  
