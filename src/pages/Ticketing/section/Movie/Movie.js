@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Movie = () => {
   const [movieList, setMovieList] = useState([]);
   const [activeMovie, setActiveMovie] = useState('');
-  const [getMovieId, setGetMovieId] = useState(0);
+  const [movieId, setMovieId] = useState(0);
 
   useEffect(() => {
     fetch('/data/ticketingList.json')
@@ -20,24 +20,23 @@ const Movie = () => {
           <AgeLimit>연령</AgeLimit>
           <MovieName>제목</MovieName>
         </Top>
-        <MovieList key={getMovieId.id}>
-          {movieList &&
-            movieList.map(item => (
-              <List
-                onClick={() => {
-                  setActiveMovie(item.name);
-                  setGetMovieId(item.id);
-                  fetch(`data/movieList.json`)
-                    .then(response => response.json())
-                    .then(result => setMovieList(result));
-                }}
-                activeMovie={activeMovie === item.name}
-                key={item.id}
-              >
-                <Age>{item.age_grade}</Age>
-                {item.name}
-              </List>
-            ))}
+        <MovieList key={movieId.id}>
+          {movieList.map(item => (
+            <List
+              onClick={() => {
+                setActiveMovie(item.name);
+                setMovieId(item.id);
+                fetch(`data/movieList.json`)
+                  .then(response => response.json())
+                  .then(result => setMovieList(result));
+              }}
+              activeMovie={activeMovie === item.name}
+              key={item.id}
+            >
+              <Age>{item.age_grade}</Age>
+              {item.name}
+            </List>
+          ))}
         </MovieList>
       </Information>
     </MovieContainer>
