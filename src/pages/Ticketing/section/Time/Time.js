@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const Time = () => {
+const time = [
+  { time_id: 1, time: '09:00' },
+  { time_id: 2, time: '12:00' },
+  { time_id: 3, time: '15:00' },
+  { time_id: 4, time: '18:00' },
+  { time_id: 5, time: '21:00' },
+];
+
+const Time = ({ ticketInfo, setTicketInfo, ticketingData }) => {
   const [timeInfo, setTimeInfo] = useState([]);
   const [activeTime, setActiveTime] = useState('');
 
@@ -14,32 +22,29 @@ const Time = () => {
   return (
     <TimeContainer>
       <Title>시간</Title>
-      <TimeSpan>조조 심야</TimeSpan>
+      {ticketInfo.hall > 0 && <Halltext>{ticketInfo.hall} 관</Halltext>}
       <TimeWrapper>
-        {timeInfo.map(item => (
-          <TimeBox key={item.id}>
-            <TimeCard>
-              <CardTop>
-                <Multiplex> {item.multiplex}</Multiplex>
-                <Floor>{item.floor}</Floor>
-                <Seat>{item.total_seats}석</Seat>
-              </CardTop>
-              <TimeSeat>
-                {item.time.map(({ time_id, time }) => (
-                  <TimeSquare
-                    key={time_id}
-                    activeTime={activeTime === time_id}
-                    onClick={() => {
-                      setActiveTime(time_id);
-                    }}
-                  >
-                    {time}
-                  </TimeSquare>
-                ))}
-              </TimeSeat>
-            </TimeCard>
-          </TimeBox>
-        ))}
+        <TimeBox>
+          <TimeCard>
+            <TimeSeat>
+              {time.map(({ time_id, time }) => (
+                <TimeSquare
+                  key={time_id}
+                  activeTime={activeTime === time_id}
+                  onClick={() => {
+                    setActiveTime(time_id);
+                    setTicketInfo({
+                      ...ticketInfo,
+                      time: time,
+                    });
+                  }}
+                >
+                  {time}
+                </TimeSquare>
+              ))}
+            </TimeSeat>
+          </TimeCard>
+        </TimeBox>
       </TimeWrapper>
     </TimeContainer>
   );
@@ -64,6 +69,7 @@ const Title = styled.div`
 
 const TimeSpan = styled.div`
   margin: 15px;
+  font-size: 30px;
 `;
 
 const TimeBox = styled.div`
@@ -95,6 +101,7 @@ const TimeSeat = styled.div`
   column-gap: 20px;
   row-gap: 20px;
   margin-left: 20px;
+  margin-top: 30px;
 `;
 
 const TimeSquare = styled.div`
@@ -112,6 +119,14 @@ const TimeSquare = styled.div`
     cursor: pointer;
     background-color: lightgray;
   }
+`;
+
+const Halltext = styled.p`
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
 `;
 
 const Multiplex = styled.div`

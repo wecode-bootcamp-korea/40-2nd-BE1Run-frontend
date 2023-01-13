@@ -3,7 +3,7 @@ import Movie from './section/Movie/Movie';
 import Theater from './section/Theater/Theater';
 import Date from './section/Date/Date';
 import Time from './section/Time/Time';
-import Ticket from '../../components/Ticket/Ticket';
+import Ticket from './Ticket';
 import styled from 'styled-components';
 
 const Ticketing = () => {
@@ -11,6 +11,25 @@ const Ticketing = () => {
   const [movieId, setMovieId] = useState(0);
   const [activeLocation, setActiveLocation] = useState('');
   const [activeTime, setActiveTime] = useState('');
+  const [ticketingData, setTicketingData] = useState('');
+
+  const [ticketInfo, setTicketInfo] = useState({
+    title: '',
+    age: 0,
+    img: '',
+    loc: '',
+    date: '',
+    hall: 0,
+    theater: '',
+    time: '',
+    duration: '',
+  });
+
+  useEffect(() => {
+    fetch('http://10.58.52.60:8000/reservation')
+      .then(response => response.json())
+      .then(result => setTicketingData(result));
+  }, []);
 
   return (
     <div>
@@ -23,19 +42,23 @@ const Ticketing = () => {
           <Wrapper>
             <Section>
               <MovieClass>
-                <Movie />
+                <Movie
+                  ticketInfo={ticketInfo}
+                  setTicketInfo={setTicketInfo}
+                  ticketingData={ticketingData.movie}
+                />
               </MovieClass>
             </Section>
             <Section>
               <TheaterClass>
-                <Theater />
+                <Theater
+                  setTicketInfo={setTicketInfo}
+                  ticketInfo={ticketInfo}
+                  ticketingData={ticketingData.theater}
+                />
               </TheaterClass>
               <DateClass>
-                <Date
-                  Ticketing={Ticketing}
-                  movieId={movieId}
-                  activeLocation={activeLocation}
-                />
+                <Date setTicketInfo={setTicketInfo} ticketInfo={ticketInfo} />
               </DateClass>
             </Section>
             <Section>
@@ -45,13 +68,16 @@ const Ticketing = () => {
                     activeTime={activeTime}
                     setActiveTime={setActiveTime}
                     movieId={movieId}
+                    setTicketInfo={setTicketInfo}
+                    ticketInfo={ticketInfo}
+                    ticketingData={ticketingData.movieTime}
                   />
                 </TimeClass>
               </TimeContainer>
             </Section>
           </Wrapper>
         </ContainBox>
-        <Ticket />
+        <Ticket ticketInfo={ticketInfo} />
       </Container>
     </div>
   );

@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import ko from 'date-fns/locale/ko';
+import { format } from 'date-fns';
 
-const Movie = ({ Ticketing }) => {
-  const [selectDay, setSelectDay] = useState(false);
-  const handleDayClick = (selectDay, { selected }) => {
-    if (selected) {
-      setSelectDay(undefined);
-    } else {
-      setSelectDay(selectDay);
-    }
-  };
+const Movie = ({ setTicketInfo, ticketInfo }) => {
+  const [selectDay, setSelectDay] = useState(null);
 
   const today = new window.Date();
 
@@ -25,7 +20,12 @@ const Movie = ({ Ticketing }) => {
       to: today.setDate(today.getDate() + 10000),
     },
   ];
-  Ticketing(selectDay);
+
+  const handleDayClick = date => {
+    setSelectDay(date);
+    setTicketInfo({ ...ticketInfo, date: format(date, 'yyyy-MM-dd') });
+  };
+
   return (
     <DateContainer>
       <Title>날짜</Title>
@@ -33,8 +33,7 @@ const Movie = ({ Ticketing }) => {
         <DayPicker
           mode="single"
           selected={selectDay}
-          onSelect={setSelectDay}
-          onChange={date => setSelectDay(date)}
+          locale={ko}
           onDayClick={handleDayClick}
           disabled={impossibleDays}
         />
